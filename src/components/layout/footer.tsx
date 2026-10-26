@@ -138,7 +138,17 @@ export const Footer: React.FC = () => {
 
         <div className="pt-8 border-t border-[#183D38] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#E5E3DC]/60">
           <p>© {new Date().getFullYear()} Santa María de Fe Digital. Proyecto independiente de turismo y patrimonio.</p>
-          <p>Fotografías: Wikimedia Commons (CC BY-SA 4.0) y archivo local · Hecho con orgullo por Misiones</p>
+          <p>
+            Hecho con orgullo en Misiones 🇵🇾 · Desarrollado por{' '}
+            <a
+              href="https://www.krctechnologiess.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-emerald-300 transition-colors"
+            >
+              KRC Technologies
+            </a>
+          </p>
         </div>
       </div>
     </footer>
