@@ -1,0 +1,7 @@
+# Variables de entorno (nunca se publican)
+.env
+
+# Base de datos local SQLite
+data/*.sqlite
+data/*.sqlite-wal
+data/*.sqlite-shm

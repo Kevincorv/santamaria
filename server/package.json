@@ -1,0 +1,15 @@
+{
+  "name": "santamaria-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Backend Node.js de administración de Santa María de Fe Digital",
+  "scripts": {
+    "start": "node index.js",
+    "create-user": "node create-user.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.11.0"
+  }
+}
