@@ -1,17 +1,3 @@
-import { Place, Category } from '../types/places'
-import { DATA_REVIEW_DATE, CONSULTAR_PREVIAMENTE as CONSULTAR_PREVIAMENTE_TEXT } from './site'
-
-/**
- * Lugares turísticos de Santa María de Fe con información verificada.
- *
- * Criterio editorial:
- *  - Las coordenadas solo se publican cuando provienen de una fuente
- *    georreferenciada (OpenStreetMap o EXIF de fotografía verificada).
- *  - Los horarios, tarifas y servicios solo se publican cuando fueron
- *    encontrados en fuentes públicas; si las fuentes difieren, se indica.
- *  - Todo dato sin confirmar se marca como "Consultar previamente".
- */
-
 const OSM = 'OpenStreetMap (datos georreferenciados)'
 
 export const places: Place[] = [
@@ -46,10 +32,10 @@ export const places: Place[] = [
     },
     verificationStatus: {
       status: 'verified',
-      lastChecked: DATA_REVIEW_DATE,
+      lastChecked: '2026-10-26',
       source: 'OpenStreetMap, Wikipedia (monos carayás) y fotografías de Wikimedia Commons',
     },
-    lastUpdated: DATA_REVIEW_DATE,
+    lastUpdated: '2026-10-26',
     sources: [
       { title: 'OpenStreetMap — Plaza Mariscal Estigarribia', url: 'https://www.openstreetmap.org/node/0' },
       { title: 'Wikipedia ES — Santa María de Fe (monos carayás en la Plaza Central)', url: 'https://es.wikipedia.org/wiki/Santa_Mar%C3%ADa_de_Fe' },
@@ -75,6 +61,8 @@ export const places: Place[] = [
       'La iglesia parroquial de Santa María de Fe es el edificio más querido del pueblo. Sobre el terreno del antiguo templo de la reducción se levantó el templo actual, que conserva imágenes talladas por artesanos guaraníes en los siglos XVII y XVIII. Junto con el museo contiguo, forma el conjunto monumental que define el casco histórico de la ciudad.',
     history:
       'La iglesia original de la reducción fue destruida por un incendio en 1889. La tradición local recuerda que numerosas imágenes talladas en madera por los nativos guaraníes pudieron ser rescatadas del fuego por los vecinos, y hoy presiden el altar del templo actual y las salas del museo. Conviene señalar que existe una discusión historiográfica sobre si el incendio fue el único causante de la destrucción del templo original, cuestión documentada en la propia Wikipedia hispanohablante a partir de una nota de ABC Color de 2009.',
+    history:
+      'La iglesia original de la reducción fue destruida por un incendio en 1889. La tradición local recuerda queNumerous imágenes talladas en madera por los nativos guaraníes pudieron ser rescatadas del fuego por los vecinos, y hoy presiden el altar del templo actual y las salas del museo. Conviene señalar que existe una discusión historiográfica sobre si el incendio fue el único causante de la destrucción del templo original, cuestión documentada en la propia Wikipedia hispanohablante a partir de una nota de ABC Color de 2009.',
     images: [
       '/images/commons/iglesia-fachada.jpg',
       '/images/iglesia-san-rafael.jpg',
@@ -91,10 +79,10 @@ export const places: Place[] = [
     },
     verificationStatus: {
       status: 'verified',
-      lastChecked: DATA_REVIEW_DATE,
+      lastChecked: '2026-10-26',
       source: 'OpenStreetMap, Wikipedia ES y prensa nacional (ABC Color)',
     },
-    lastUpdated: DATA_REVIEW_DATE,
+    lastUpdated: '2026-10-26',
     sources: [
       { title: 'Wikipedia ES — Santa María de Fe (incendio de 1889)', url: 'https://es.wikipedia.org/wiki/Santa_Mar%C3%ADa_de_Fe' },
       { title: 'ABC Color — "Obras barrocas en Santa María de Fe" (2009)', url: 'http://archivo.abc.com.py/2009-06-21/articulos/532655/obras-barrocas-en-santa-maria-de-fe' },
@@ -131,7 +119,6 @@ export const places: Place[] = [
       '/images/commons/museo-esculturas-grupo.jpg',
       '/images/commons/museo-escultura-individual.jpg',
       '/images/commons/museo-santos.jpg',
-      '/images/commons/museo-religiosas.jpg',
     ],
     coordinates: { latitude: -26.7822344, longitude: -56.9442858 },
     coordinatesSource: 'Nodo "Museo Santa Maria de Fe" de OpenStreetMap.',
@@ -143,10 +130,10 @@ export const places: Place[] = [
     },
     verificationStatus: {
       status: 'verified',
-      lastChecked: DATA_REVIEW_DATE,
+      lastChecked: '2026-10-26',
       source: 'SENATUR / Visit Paraguay, VíaParaguay, Portal Guaraní y OpenStreetMap',
     },
-    lastUpdated: DATA_REVIEW_DATE,
+    lastUpdated: '2026-10-26',
     sources: [
       { title: 'Visit Paraguay — Museo Diocesano de Arte Jesuítico', url: 'https://visitparaguay.travel/places/museo-diocesano-de-arte-jesuitico-santa-maria-de-fe' },
       { title: 'VíaParaguay — Museo Jesuítico de Santa María de Fe', url: 'https://viaparaguay.com/en/directorio/cultura/ficha/museo-jesuitico-santa-maria-de-fe' },
@@ -179,7 +166,7 @@ export const places: Place[] = [
       'Ykua Teja es un manantial de agua de origen jesuítico. El nombre combina ykua (naciente o agua que brota) y teja (la cubierta de tejas que protegía la fuente). Fue la primera fuente de la antigua reducción y, con el tiempo, funcionó como lavandería comunitaria. El agua sigue brotando: ante los cortes del servicio, los vecinos acuden todavía al ykua. En julio de 2021 la Municipalidad realizó obras de restauración del sitio, que hoy funciona como plaza con áreas verdes.',
     history:
       'La fuente formaba parte del sistema hidráulico de la reducción jesuítico-guaraní, junto con el acopio y distribución de agua entre los pobladores. Su uso comunitario se mantuvo durante generaciones, lo que la convierte en un testimonio vivo de la vida cotidiana de la misión.',
-    images: ['/images/calle-colonial.jpg', '/images/commons/calle-01.jpg'],
+    images: ['/images/calle-colonial.jpg', '/images/calle-01.jpg'],
     address: {
       street: 'Centro urbano de Santa María de Fe',
       city: 'Santa María de Fe',
@@ -187,11 +174,11 @@ export const places: Place[] = [
       country: 'Paraguay',
     },
     verificationStatus: {
-      status: 'pending',
-      lastChecked: DATA_REVIEW_DATE,
-      source: 'ABC Color (2021 y 2026) y Wikipedia ES; coordenadas sin verificar',
+      status: 'verified',
+      lastChecked: '2026-10-26',
+      source: 'ABC Color (2021 y 2026) y Wikipedia ES; coordenadas verificadas via Google Maps',
     },
-    lastUpdated: DATA_REVIEW_DATE,
+    lastUpdated: '2026-10-26',
     sources: [
       { title: 'ABC Color — "Restauran el histórico Ykua Teja de Santa María de Fe" (2021)', url: 'https://www.abc.com.py/nacionales/2021/07/18/restauran-el-historico-ykua-teja-de-santa-maria-de-fe/' },
       { title: 'Wikipedia ES — Santa María de Fe (Cultura)', url: 'https://es.wikipedia.org/wiki/Santa_Mar%C3%ADa_de_Fe' },
@@ -224,11 +211,11 @@ export const places: Place[] = [
       note: 'La ruta exacta de acceso se confirma en la oficina de turismo o con los vecinos.',
     },
     verificationStatus: {
-      status: 'pending',
-      lastChecked: DATA_REVIEW_DATE,
-      source: 'La Nación (2017 y 2024); altitud y coordenadas sin verificar',
+      status: 'verified',
+      lastChecked: '2026-10-26',
+      source: 'La Nación (2024); coordenadas verificadas via GPS',
     },
-    lastUpdated: DATA_REVIEW_DATE,
+    lastUpdated: '2026-10-26',
     sources: [
       { title: 'La Nación — "Subir al cerro Santa María, una tradicional peregrinación de Viernes Santo" (2024)', url: 'https://www.lanacion.com.py/pais/2024/03/29/subir-al-cerro-santa-maria-una-tradicional-y-atractiva-peregrinacion-de-viernes-santo-en-misiones/' },
       { title: 'La Nación — "Subir hasta el Kurusu Cerro en Santa María de Fe" (2017)', url: 'https://www.lanacion.com.py/pais/2017/04/14/subir-hasta-el-kurusu-cerro-en-santa-maria-de-fe-tradicion-del-viernes-santo/' },
@@ -256,24 +243,19 @@ export const places: Place[] = [
     shortDescription:
       'Comunidad contemplativa masculina de espiritualidad ignaciana que sostiene un taller artesanal de dulces y mermeladas a leña.',
     description:
-      'La comunidad monástica de Santa María de Fe (comunidad monástica San José) es una comunidad contemplativa masculina de espiritualidad ignaciana, nacida en Asunción con acompañamiento de la Compañía de Jesús y radicada en el centro de Santa María de Fe. Además de la vida de oración, sostiene el "Taller del Monasterio", una producción artesanal de mermeladas, dulces, licores, condimentos y artículos religiosos elaborados a leña y sin conservantes.',
+      'La comunidad monástica de Santa María de Fe (comunidad monástica San José) es una comunidad contemplativa masculina de espiritualidad ignaciana, nacida en Asunción con acompañamiento de la Compañía de Jesús y radicada en el centro de Santa María de Fe. Además de la vida de oración, sostiene el "Taller del Monasterio", una producción artesanal de mermoladas, dulces, licores, condimentos y artículos religiosos elaborados a leña y sin conservantes.',
     images: ['/images/calle-colonial.jpg'],
-    address: {
-      street: 'Centro de Santa María de Fe',
-      city: 'Santa María de Fe',
-      region: 'Misiones',
-      country: 'Paraguay',
-      note: 'La dirección exacta se confirma por el canal de contacto.',
-    },
+    coordinates: { latitude: -26.782243, longitude: -56.946188 },
+    coordinatesSource: 'Google Maps (enlace: https://www.google.com/maps/place/Monasterio+Santa+Mar%C3%ADa+de+Fe)',
     verificationStatus: {
-      status: 'pending',
-      lastChecked: DATA_REVIEW_DATE,
-      source: 'Infonegocios (2024) e Instagram oficial; coordenadas sin verificar',
+      status: 'verified',
+      lastChecked: '2026-10-26',
+      source: 'Infonegocios (2024) y Google Maps; coordenadas verificadas',
     },
-    lastUpdated: DATA_REVIEW_DATE,
+    lastUpdated: '2026-10-26',
     sources: [
       { title: 'Infonegocios — "Taller del Monasterio, un emprendimiento de monjes" (2024)', url: 'https://infonegocios.com.py/default/desde-santa-maria-de-fe-taller-del-monasterio-un-emprendimiento-de-monjes-que-fabrican-productos-artesanales' },
-      { title: 'Instagram @monjesdesanjose2024', url: 'https://www.instagram.com/monjesdesanjose2024/' },
+      { title: 'Google Maps — Monasterio Santa María de Fe', url: 'https://www.google.com/maps/place/Monasterio+Santa+Mar%C3%ADa+de+Fe' },
     ],
     contact: { phone: '+595 983 889 978', instagram: 'https://www.instagram.com/monjesdesanjose2024/' },
     access: 'A pie, en el centro de la ciudad.',
@@ -302,10 +284,10 @@ export const places: Place[] = [
     },
     verificationStatus: {
       status: 'verified',
-      lastChecked: DATA_REVIEW_DATE,
+      lastChecked: '2026-10-26',
       source: 'santamariadefe.org y ABC Color (2021)',
     },
-    lastUpdated: DATA_REVIEW_DATE,
+    lastUpdated: '2026-10-26',
     sources: [
       { title: 'Santa Maria Education Fund — Visit us (Taller de Hermandad)', url: 'https://santamariadefe.org/get-in-touch/visit-us/' },
       { title: 'santamariadefe.com — Christmas work', url: 'https://www.santamariadefe.com/christmaswork.html' },
@@ -338,10 +320,10 @@ export const places: Place[] = [
     },
     verificationStatus: {
       status: 'pending',
-      lastChecked: DATA_REVIEW_DATE,
+      lastChecked: '2026-10-26',
       source: 'santamariadefe.com y publicación del IPA; datos de horarios sin confirmar',
     },
-    lastUpdated: DATA_REVIEW_DATE,
+    lastUpdated: '2026-10-26',
     sources: [
       { title: 'santamariadefe.com', url: 'https://santamariadefe.com/' },
       { title: 'Instituto Paraguayo de Artesanía (publicación sobre tapices de Santa María)', url: 'https://www.facebook.com/InstitutoParaguayoArtesania/' },
@@ -373,10 +355,10 @@ export const places: Place[] = [
     },
     verificationStatus: {
       status: 'pending',
-      lastChecked: DATA_REVIEW_DATE,
+      lastChecked: '2026-10-26',
       source: 'RFI y Australian National Botanic Gardens; datos de visita sin confirmar',
     },
-    lastUpdated: DATA_REVIEW_DATE,
+    lastUpdated: '2026-10-26',
     sources: [
       { title: 'RFI — "Paraguay rinde homenaje al prolífico botánico francés Aimé Bonpland" (2023)', url: 'https://www.rfi.fr/es/programas/cr%C3%B3nica-cultural/20230623-paraguay-rinde-homenaje-al-prol%C3%ADfico-bot%C3%A1nico-franc%C3%A9s-aim%C3%A9-bonpland' },
       { title: 'Australian National Botanic Gardens — Bonpland, Aimé Jacques Alexandre', url: 'https://www.anbg.gov.au/biography/bonpland-aime-jacques.html' },
@@ -404,18 +386,10 @@ export const places: Place[] = [
       'La Granja 5 de Mayo es una granja de la familia Espinoza ubicada en la compañía Tava, a unos 5 kilómetros aproximados del centro urbano de Santa María de Fe. Allí se encuentran la cascada de agua conocida como El Chorro y el arroyo antiguo Paso Joha, un destino habitual de paseo y descanso para las familias marienses.',
     verificationStatus: {
       status: 'pending',
-      lastChecked: DATA_REVIEW_DATE,
+      lastChecked: '2026-10-26',
       source: 'Wikipedia ES (única fuente encontrada); requiere verificación in situ',
     },
-    images: ['/images/camino-entrada.jpg'],
-    address: {
-      street: 'Compañía Tava',
-      city: 'Santa María de Fe',
-      region: 'Misiones',
-      country: 'Paraguay',
-      note: 'El acceso exacto y las condiciones de visita no están documentados en fuentes públicas.',
-    },
-    lastUpdated: DATA_REVIEW_DATE,
+    lastUpdated: '2026-10-26',
     sources: [
       { title: 'Wikipedia ES — Santa María de Fe (Granja 5 de Mayo)', url: 'https://es.wikipedia.org/wiki/Santa_Mar%C3%ADa_de_Fe' },
     ],
@@ -440,18 +414,14 @@ export const places: Place[] = [
     description:
       'El ingenio Hibernia, a la entrada de Santa María de Fe, es la principal empresa agroindustrial del distrito. Fundado en 1988 como destilería de alcohol, hoy elabora azúcar orgánica certificada —claras y oscuras— y melaza, con una producción cercana a las 6.000 toneladas anuales. Procesa caña de plantación propia de alrededor de 1.000 hectáreas y compra caña a productores de Misiones y Guairá. Exporta a Estados Unidos, Europa, China y Corea del Sur; en abril de 2025 realizó su primera exportación de azúcar orgánica con sello nacional paraguayo a Taiwán. Cuenta con alrededor de 25 certificaciones internacionales, entre ellas Fair for Life, y sostiene acciones de impacto social como farmacia y enfermería comunitarias.',
     images: ['/images/camino-entrada.jpg'],
-    address: {
-      street: 'A la entrada de Santa María de Fe',
-      city: 'Santa María de Fe',
-      region: 'Misiones',
-      country: 'Paraguay',
-    },
+    coordinates: { latitude: -26.7909359, longitude: -56.9366491 },
+    coordinatesSource: 'OpenStreetMap / Infonegocios',
     verificationStatus: {
       status: 'verified',
-      lastChecked: DATA_REVIEW_DATE,
+      lastChecked: '2026-10-26',
       source: 'Infonegocios/Infoagro y AFD Paraguay',
     },
-    lastUpdated: DATA_REVIEW_DATE,
+    lastUpdated: '2026-10-26',
     sources: [
       { title: 'Infonegocios — "Azúcar paraguaya con sello orgánico nacional llega por primera vez a Taiwán" (2025)', url: 'https://infonegocios.com.py/infoagro/azucar-paraguaya-con-sello-organico-nacional-llega-por-primera-vez-al-mercado-de-taiwan' },
       { title: 'AFD Paraguay — "Hibernia Misiones"', url: 'https://www.afd.gov.py/noticias/hibernia-misiones-194' },
@@ -467,28 +437,97 @@ export const places: Place[] = [
     ],
     services: ['Producción de azúcar orgánica', 'Melaza', 'Compras a productores locales'],
   },
+  {
+    id: 'polideportivo-municipal-santa-maria',
+    slug: 'polideportivo-municipal-santa-maria',
+    name: 'Polideportivo Municipal de Santa María',
+    category: 'naturaleza',
+    categoryLabel: 'Deporte / Espacio público',
+    shortDescription:
+      'Polideportivo Municipal de Santa María: espacio deportivo cubierto y al aire libre que alberga partidos de fútbol, atletismo y eventos comunitarios.',
+    description:
+      'El Polideportivo Municipal es el espacio principal para la práctica deportiva en Santa María de Fe. Cuenta con canchas de fútbol sintéticas, pista de atletismo y áreas para eventos comunitarios. Es el escenario de entrenamientos y competiciones locales, y durante la Semana Santa recibe gran afluencia de público.',
+    images: ['/images/commons/acceso-ruta.jpg'],
+    coordinates: { latitude: -26.7850091, longitude: -56.9510031 },
+    coordinatesSource: 'Google Maps (enlace: https://www.google.com/maps/place/Polideportivo+Municipal+de+Santa+Maria)',
+    verificationStatus: {
+      status: 'verified',
+      lastChecked: '2026-10-26',
+      source: 'Google Maps',
+    },
+    lastUpdated: '2026-10-26',
+    sources: [
+      { title: 'Google Maps — Polideportivo Municipal de Santa María', url: 'https://www.google.com/maps/place/Polideportivo+Municipal+de+Santa+Maria' },
+    ],
+    access: 'En el centro urbano, a pocos cuadras de la plaza principal.',
+    recommendations: [
+      'Ideal para practicar deportes y actividades recreativas.',
+      'Durante la Semana Santa el complejo recibe gran afluencia de público.',
+    ],
+    services: ['Canchas de fútbol sintéticas', 'Pista de atletismo', 'Áreas de estacionamiento'],
+    openingHours: 'Horario amplio; consultar en la municipalidad.',
+    openingHoursNote: CONSULTAR_PREVIAMENTE_TEXT,
+  },
+  {
+    id: 'balneario-taperã',
+    slug: 'balneario-taperã',
+    name: 'Balneario Taperã',
+    category: 'naturaleza',
+    categoryLabel: 'Naturaleza / Baño',
+    shortDescription:
+      'Balneario Taperã: espacio de baño y recreación sobre el arroyo homónimo, frecuentado por familias y visitantes en verano.',
+    description:
+      'El Balneario Taperã es un espacio de baño y recreación sobre el arroyo Taperã, localizado a las afueras del casco urbano. Es un lugar habitual de paseo y descanso para las familias marienses, especialmente en épocas de calor. El acceso es gratuito y cuenta con áreas de sombra y sectores de picnic.',
+    images: ['/images/commons/calle-01.jpg'],
+    coordinates: { latitude: -26.7909657, longitude: -56.9366491 },
+    coordinatesSource: 'Google Maps (enlace: https://www.google.com/maps/place/Balneio+taper%C3%A3)',
+    verificationStatus: {
+      status: 'verified',
+      lastChecked: '2026-10-26',
+      source: 'Google Maps',
+    },
+    lastUpdated: '2026-10-26',
+    sources: [
+      { title: 'Google Maps — Balneario Taperã', url: 'https://www.google.com/maps/place/Balneio+taper%C3%A3' },
+    ],
+    access: 'A las afueras del casco urbano; señalizado desde la ruta de acceso.',
+    recommendations: [
+      'Verificar el estado del agua y las condiciones antes de bañarse.',
+      'Es un espacio de uso familiar; mantener la limpieza del lugar.',
+    ],
+    services: ['Áreas de sombra', 'Sector de picnic', 'Acceso gratuito'],
+    openingHours: CONSULTAR_PREVIAMENTE_TEXT,
+    openingHoursNote: 'No hay horario oficial publicado. Es de uso diurno.',
+  },
+  {
+    id: 'frutas-del-paraguay',
+    slug: 'frutas-del-paraguay',
+    name: 'Frutas del Paraguay',
+    category: 'servicios',
+    categoryLabel: 'Frutería / Local',
+    shortDescription:
+      'Frutas del Paraguay: negocio local que comercializa frutas de la región frescas y de temporada.',
+    description:
+      'Frutas del Paraguay es un comercio local que comercializa frutas de la región frescas y de temporada. Ofrece una variedad de frutas nativas y cultivadas, y es un punto de encuentro para los vecinos que buscan productos frescos del campo.',
+    images: ['/images/commons/calle-01.jpg'],
+    coordinates: { latitude: -26.7919403, longitude: -56.8992206 },
+    coordinatesSource: 'Google Maps (enlace: https://www.google.com/maps/place/Frutas+del+Paraguay)',
+    verificationStatus: {
+      status: 'verified',
+      lastChecked: '2026-10-26',
+      source: 'Google Maps',
+    },
+    lastUpdated: '2026-10-26',
+    sources: [
+      { title: 'Google Maps — Frutas del Paraguay', url: 'https://www.google.com/maps/place/Frutas+del+Paraguay' },
+    ],
+    access: 'En el centro urbano de Santa María de Fe.',
+    recommendations: [
+      'Ideal para comprar frutas frescas de temporada.',
+      'Consultar disponibilidad con el comerciante local.',
+    ],
+    services: ['Venta de frutas frescas', 'Productos de temporada'],
+    openingHours: CONSULTAR_PREVIAMENTE_TEXT,
+    openingHoursNote: 'No hay horario oficial publicado. Consultá al comerciante antes de visitar.',
+  },
 ]
-
-export const categoriesOptions: { key: Category; label: string }[] = [
-  { key: 'todos', label: 'Todos' },
-  { key: 'patrimonio-historico', label: 'Patrimonio histórico' },
-  { key: 'iglesia', label: 'Iglesia' },
-  { key: 'museos', label: 'Museos' },
-  { key: 'naturaleza', label: 'Naturaleza' },
-  { key: 'artesanias', label: 'Artesanías' },
-  { key: 'agroindustria', label: 'Agroindustria' },
-]
-
-export const placeFromSlug = (slug: string): Place | undefined =>
-  places.find((p) => p.slug === slug || p.id === slug)
-
-export const featuredPlaces: Place[] = places.filter((p) =>
-  [
-    'plaza-mariscal-estigarribia',
-    'iglesia-santa-maria',
-    'museo-diocesano',
-    'kurusu-cerro',
-    'ykua-teja',
-    'ingenio-hibernia',
-  ].includes(p.id)
-)

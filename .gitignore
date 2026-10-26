@@ -36,3 +36,6 @@ archivos-no-publicados/
 *.njsproj
 *.sln
 *.sw?
+
+.vercel
+.env*
