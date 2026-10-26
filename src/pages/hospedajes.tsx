@@ -48,6 +48,16 @@ export const HospedajesPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {accommodations.map((a) => {
             const verified = a.verificationStatus.status === 'verified'
+            // Destino de Google Maps: coordenadas verificadas si existen; si no,
+            // la dirección publicada (nombre + calle + ciudad).
+            const mapsDestination = a.coordinates
+              ? `${a.coordinates.latitude},${a.coordinates.longitude}`
+              : [a.name, a.address.street, a.address.city, a.address.region, a.address.country]
+                  .filter(Boolean)
+                  .join(', ')
+            const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+              mapsDestination
+            )}`
             return (
               <article
                 key={a.id}
@@ -138,16 +148,14 @@ export const HospedajesPage: React.FC = () => {
                           <Camera className="w-3.5 h-3.5" /> Instagram
                         </a>
                       )}
-                      {a.coordinates && (
-                        <a
-                          href={`https://www.google.com/maps/search/?api=1&query=${a.coordinates.latitude},${a.coordinates.longitude}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 rounded-full bg-[#18685A] hover:bg-[#22806d] px-4 py-2 text-xs font-semibold text-white transition-colors"
-                        >
-                          <Navigation className="w-3.5 h-3.5" /> Ver en mapa
-                        </a>
-                      )}
+                      <a
+                        href={mapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-full bg-[#18685A] hover:bg-[#22806d] px-4 py-2 text-xs font-semibold text-white transition-colors"
+                      >
+                        <Navigation className="w-3.5 h-3.5" /> Cómo llegar
+                      </a>
                       {a.bookingUrl && (
                         <a
                           href={a.bookingUrl}
