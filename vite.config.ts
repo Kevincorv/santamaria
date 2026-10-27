@@ -33,16 +33,12 @@ export default defineConfig({
         ],
       },
       workbox: {
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/.*\.tile\.openstreetmap\.org\/.*/,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'map-tiles',
-              expiration: { maxEntries: 200, maxAgeSeconds: 60 * 60 * 24 * 7 },
-            },
-          },
-        ],
+        // registerType: 'autoUpdate' ya maneja la actualización correcta:
+        // - Precache los assets hasheados por Vite (CSS/JS tienen URLs únicas por hash)
+        // - registerType 'autoUpdate' claima el SW nuevo en refresh
+        // - Las rutas HTML (React Router) usan el JS precachado, por lo que siempre van al latest
+        // - Los tiles de mapa usan CacheFirst con expiración 7 días
+        disableDevLogs: import.meta.env.production,
       },
     }),
   ],
