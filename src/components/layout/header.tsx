@@ -77,9 +77,9 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - ALL LINKS VISIBLE */}
 
-          <nav className="hidden xl:flex items-center gap-5" aria-label="Navegación principal">
+          <nav className="flex items-center gap-5" aria-label="Navegación principal">
             {navLinks.map((item) => {
               const isActive =
                 item.href === '/'
@@ -114,7 +114,7 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Buscar…"
+                placeholder="Buscar lugares, hoteles, restaurantes…"
                 className="w-36 lg:w-48 rounded-full bg-white/10 border border-white/15 px-4 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-emerald-400/70 focus:bg-white/15"
               />
               <button
