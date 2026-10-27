@@ -156,8 +156,8 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
 
           {/* Mobile menu overlay / drawer */}
           {mobileMenuOpen && (
-            <div className="fixed inset-0 bg-[#102D2B]/95 backdrop-blur-sm z-50 flex items-center justify-center pt-20">
-              <nav className="flex flex-col gap-6 max-w-none w-full px-4">
+            <div className="fixed inset-0 bg-[#102D2B]/95 backdrop-blur-sm z-50 flex flex-col">
+              <nav className="flex flex-col w-full overflow-y-auto max-h-[calc(100vh_-_80px)] px-4 py-4 gap-4 text-white">
                 {navLinks.map((item) => {
                   const isActive =
                     item.href === '/'
@@ -168,7 +168,7 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
                     <Link
                       key={item.title}
                       to={item.href}
-                      className={`text-xl font-medium text-white transition-colors hover:text-emerald-300 ${
+                      className={`text-white transition-colors hover:text-emerald-400 ${
                         isActive ? 'text-emerald-400' : 'text-white'
                       }`}
                     >
@@ -178,10 +178,11 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
                 })}
                 <button
                   onClick={() => setMobileMenuOpen(false)}
-                  className="absolute top-6 right-6 text-white/60 hover:text-white transition-colors"
+                  className="mt-2 text-white/60 hover:text-white transition-colors text-sm"
                   aria-label="Cerrar menú"
                 >
-                  <X className="w-6 h-6" />
+                  <X className="w-5 h-5" />
+                  <span className="ml-2">Cerrar</span>
                 </button>
               </nav>
             </div>
