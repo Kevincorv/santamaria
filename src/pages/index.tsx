@@ -64,7 +64,7 @@ export const Home: React.FC = () => {
   const heroImage = '/images/commons/plaza-iglesia-01.jpg'
 
   return (
-    <div className="min-h-screen bg-[#F7F4ED] text-[#202724] flex flex-col font-sans">
+    <div className="min-h-screen bg-[#F7F4ED] text-[#202724] font-sans">
       <Header />
 
       <main className="flex-1">
@@ -74,110 +74,98 @@ export const Home: React.FC = () => {
             <SmartImage
               src={heroImage}
               alt="Iglesia y plaza central de Santa María de Fe entre la arboleda, Misiones, Paraguay"
-              className="w-full h-full"
+              className="w-full h-full object-cover"
               imgClassName="object-cover object-center"
               lazy={false}
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0b1f1d]/95 via-[#102D2B]/75 to-[#102D2B]/35" />
-            <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-[#0b1f1d] to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0b1f1d]/95 via-[#102D2B]/75 to-[#102D2B]/30" />
+            <div className="absolute inset-x-0 bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-[#0b1f1d]/80 via-transparent to-transparent" />
           </div>
 
           <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10">
-            <div className="flex items-start justify-between gap-6">
+            <div className="flex flex-col items-start gap-6">
               <div className="max-w-2xl">
-                <span className="font-script text-4xl sm:text-5xl text-amber-200 block mb-1">
+                <span className="font-script text-[clamp(2rem,5vw,3rem)] sm:text-[clamp(2.5rem,6vw,3.5rem)] text-amber-200 block mb-1">
                   Descubrí
                 </span>
-                <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05]">
+                <h1 className="font-serif text-[clamp(3rem,8vw,4.5rem)] sm:text-[clamp(3.5rem,9vw,5rem)] lg:text-[clamp(4rem,10vw,6rem)] font-bold tracking-tight leading-[1.05]">
                   Santa María de Fe
                 </h1>
-                <p className="mt-5 text-base sm:text-lg text-[#E5E3DC]/90 leading-relaxed max-w-lg">
+                <p className="mt-4 text-[clamp(1rem,3vw,1.2rem)] sm:text-[clamp(1.2rem,4vw,1.5rem)] text-[#E5E3DC]/90 leading-relaxed max-w-xl">
                   Historia, cultura, naturaleza y gente linda.
                   <br />
                   Todo en un solo lugar.
                 </p>
               </div>
 
-              <div className="hidden lg:block text-right select-none pt-6">
-                <span className="font-script text-3xl xl:text-4xl text-amber-200/90 block -rotate-6">
-                  Conocé
-                </span>
-                <span className="font-script text-3xl xl:text-4xl text-amber-200/90 block rotate-3 ml-8">
-                  Explorá
-                </span>
-                <span className="font-script text-3xl xl:text-4xl text-amber-200/90 block -rotate-2">
-                  Viví
-                </span>
-              </div>
-            </div>
-
-            {/* Accesos rápidos */}
-            <nav
-              aria-label="Accesos rápidos"
-              className="mt-10 grid grid-cols-4 sm:grid-cols-4 lg:grid-cols-8 gap-2.5 sm:gap-3 max-w-4xl"
-            >
-              {quickAccessItems.map((item) => (
-                <Link
-                  key={item.label}
-                  to={item.href}
-                  className="group flex flex-col items-center justify-center gap-2 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 px-2 py-4 sm:py-5 hover:bg-white/20 hover:border-white/25 transition-all text-center"
-                >
-                  <item.icon className="w-6 h-6 text-emerald-200 group-hover:text-white transition-colors" aria-hidden="true" />
-                  <span className="text-[11px] sm:text-xs font-medium text-[#E5E3DC] leading-tight">
-                    {item.label}
-                  </span>
-                </Link>
-              ))}
-            </nav>
-
-            {/* Buscador + ubicación */}
-            <div className="mt-8 flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-8">
-              <form onSubmit={handleSearch} role="search" className="flex-1 max-w-2xl">
-                <label htmlFor="home-search" className="sr-only">
-                  ¿Qué estás buscando?
-                </label>
-                <div className="relative">
-                  <input
-                    id="home-search"
-                    type="search"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="¿Qué estás buscando?"
-                    className="w-full rounded-full bg-white pl-6 pr-16 py-4 text-[#202724] placeholder:text-gray-500 shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
-                  />
-                  <button
-                    type="submit"
-                    aria-label="Buscar"
-                    className="absolute right-2 top-1/2 -translate-y-1/2 p-3 rounded-full bg-[#18685A] hover:bg-[#22806d] text-white transition-colors"
+              {/* Accesos rápidos - 4 columnas en móvil */}
+              <nav
+                aria-label="Accesos rápidos"
+                className="mt-6 w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 max-w-none"
+              >
+                {quickAccessItems.map((item) => (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    className="flex flex-col items-center justify-center gap-2 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 px-2 py-3 sm:py-4 hover:bg-white/20 hover:border-white/25 transition-all text-center"
                   >
-                    <Search className="w-5 h-5" />
-                  </button>
-                </div>
-              </form>
+                    <item.icon className="w-6 h-6 text-emerald-200 group-hover:text-white transition-colors" aria-hidden="true" />
+                    <span className="text-[10px] sm:text-xs font-medium text-[#E5E3DC] leading-tight">
+                      {item.label}
+                    </span>
+                  </Link>
+                ))}
+              </nav>
+            </div>
+          </div>
 
-              <div className="flex items-center gap-2.5 text-[#E5E3DC]/90 shrink-0">
-                <MapPin className="w-5 h-5 text-emerald-300" aria-hidden="true" />
-                <div className="text-sm leading-tight">
-                  <p className="font-semibold text-white">Santa María de Fe</p>
-                  <p className="text-xs text-[#E5E3DC]/75">Misiones · Paraguay</p>
-                </div>
+          {/* Buscador + ubicación */}
+          <div className="mt-8 w-full flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-8">
+            <form onSubmit={handleSearch} role="search" className="flex-1 max-w-2xl">
+              <label htmlFor="home-search" className="sr-only">
+                ¿Qué estás buscando?
+              </label>
+              <div className="relative">
+                <input
+                  id="home-search"
+                  type="search"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="¿Qué estás buscando?"
+                  className="w-full rounded-full bg-white pl-6 pr-16 py-4 text-[#202724] placeholder:text-gray-500 shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                />
+                <button
+                  type="submit"
+                  aria-label="Buscar"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-3 rounded-full bg-[#18685A] hover:bg-[#22806d] text-white transition-colors"
+                >
+                  <Search className="w-5 h-5" />
+                </button>
+              </div>
+            </form>
+
+            <div className="flex items-center gap-2.5 text-[#E5E3DC]/90 shrink-0">
+              <MapPin className="w-5 h-5 text-emerald-300" aria-hidden="true" />
+              <div className="text-sm leading-tight">
+                <p className="font-semibold text-white">Santa María de Fe</p>
+                <p className="text-xs text-[#E5E3DC]/75">Misiones · Paraguay</p>
               </div>
             </div>
-
-            <p className="mt-6 text-[11px] text-[#E5E3DC]/60">
-              Portada: plaza e iglesia de Santa María de Fe, en el casco histórico del pueblo.
-            </p>
           </div>
+
+          <p className="mt-6 text-[11px] text-[#E5E3DC]/60">
+            Portada: plaza e iglesia de Santa María de Fe, en el casco histórico del pueblo.
+          </p>
         </section>
 
         {/* ============ LUGARES DESTACADOS ============ */}
-        <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <div className="flex flex-wrap items-end justify-between gap-4 mb-8">
+        <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="flex flex-col items-end justify-between gap-4 mb-8">
             <div>
               <span className="text-xs uppercase tracking-wider font-semibold text-[#28685A]">
                 Patrimonio y naturaleza
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#102D2B] tracking-tight mt-1">
+              <h2 className="font-serif text-[clamp(1.5rem,4vw,2rem)] sm:text-[clamp(1.75rem,4.5vw,2.25rem)] font-bold text-[#102D2B] tracking-tight mt-1">
                 Lugares destacados
               </h2>
               <p className="text-gray-600 text-sm sm:text-base mt-2 max-w-2xl">
@@ -192,7 +180,7 @@ export const Home: React.FC = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredPlaces.map((place) => (
               <Link
                 key={place.id}
@@ -202,7 +190,7 @@ export const Home: React.FC = () => {
                 <SmartImage
                   src={place.images[0]}
                   alt={place.name}
-                  className="w-full h-52"
+                  className="w-full h-[200px] object-cover transition-opacity duration-500"
                   imgClassName="group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="p-5">
@@ -232,13 +220,13 @@ export const Home: React.FC = () => {
 
         {/* ============ ALOJAMIENTOS ============ */}
         <section className="bg-white border-y border-[#E5E3DC]">
-          <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-14">
-            <div className="flex flex-wrap items-end justify-between gap-4 mb-8">
+          <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="flex flex-col sm:flex-row items-end justify-between gap-4 mb-8">
               <div>
                 <span className="text-xs uppercase tracking-wider font-semibold text-[#28685A]">
                   Turismo solidario
                 </span>
-                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#102D2B] tracking-tight mt-1">
+                <h2 className="font-serif text-[clamp(1.75rem,4.5vw,2.25rem)] sm:text-[clamp(2rem,5vw,2.5rem)] font-bold text-[#102D2B] tracking-tight mt-1">
                   Dormí en Santa María
                 </h2>
                 <p className="text-gray-600 text-sm sm:text-base mt-2 max-w-2xl">
@@ -263,7 +251,7 @@ export const Home: React.FC = () => {
                   <SmartImage
                     src={a.images[0]}
                     alt={a.name}
-                    className="w-full h-48"
+                    className="w-full h-[180px] object-cover transition-transform duration-500"
                     imgClassName="group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="p-5">
@@ -309,13 +297,13 @@ export const Home: React.FC = () => {
         </section>
 
         {/* ============ GASTRONOMÍA ============ */}
-        <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <div className="flex flex-wrap items-end justify-between gap-4 mb-8">
+        <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="flex flex-col sm:flex-row items-end justify-between gap-4 mb-8">
             <div>
               <span className="text-xs uppercase tracking-wider font-semibold text-[#28685A]">
                 Sabores de la tierra
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#102D2B] tracking-tight mt-1">
+              <h2 className="font-serif text-[clamp(1.75rem,4.5vw,2.25rem)] sm:text-[clamp(2rem,5vw,2.5rem)] font-bold text-[#102D2B] tracking-tight mt-1">
                 Gastronomía local
               </h2>
               <p className="text-gray-600 text-sm sm:text-base mt-2 max-w-2xl">
@@ -340,7 +328,7 @@ export const Home: React.FC = () => {
                 <SmartImage
                   src={r.images[0]}
                   alt={r.name}
-                  className="w-full h-44"
+                  className="w-full h-[150px] object-cover transition-transform duration-500"
                   imgClassName="group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="p-5">
@@ -359,13 +347,13 @@ export const Home: React.FC = () => {
 
         {/* ============ CELEBRACIONES ============ */}
         <section className="bg-white border-y border-[#E5E3DC]">
-          <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-14">
-            <div className="flex flex-wrap items-end justify-between gap-4 mb-8">
+          <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="flex flex-col sm:flex-row items-end justify-between gap-4 mb-8">
               <div>
                 <span className="text-xs uppercase tracking-wider font-semibold text-[#28685A]">
                   Tradición viva
                 </span>
-                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#102D2B] tracking-tight mt-1">
+                <h2 className="font-serif text-[clamp(1.75rem,4.5vw,2.25rem)] sm:text-[clamp(2rem,5vw,2.5rem)] font-bold text-[#102D2B] tracking-tight mt-1">
                   Celebraciones de siempre
                 </h2>
                 <p className="text-gray-600 text-sm sm:text-base mt-2 max-w-2xl">
@@ -401,13 +389,13 @@ export const Home: React.FC = () => {
         </section>
 
         {/* ============ RECORRIDOS ============ */}
-        <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <div className="flex flex-wrap items-end justify-between gap-4 mb-8">
+        <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="flex flex-col sm:flex-row items-end justify-between gap-4 mb-8">
             <div>
               <span className="text-xs uppercase tracking-wider font-semibold text-[#28685A]">
                 Planeá tu visita
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#102D2B] tracking-tight mt-1">
+              <h2 className="font-serif text-[clamp(1.75rem,4.5vw,2.25rem)] sm:text-[clamp(2rem,5vw,2.5rem)] font-bold text-[#102D2B] tracking-tight mt-1">
                 Recorridos autoguiados
               </h2>
             </div>
@@ -429,7 +417,7 @@ export const Home: React.FC = () => {
                 <SmartImage
                   src={t.image}
                   alt={t.title}
-                  className="w-full h-40 opacity-90"
+                  className="w-full h-[180px] object-cover transition-transform duration-500"
                   imgClassName="group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="p-5">
