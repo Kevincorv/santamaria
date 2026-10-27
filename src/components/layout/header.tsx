@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Menu, X, QrCode, Search } from 'lucide-react'
 
@@ -51,21 +51,6 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
     { title: 'Recorridos', href: '/recorridos' },
   ]
 
-  // Safe area insets for iOS
-  const safeAreaTop = useMemo(() => {
-    if (typeof window !== 'undefined') {
-      return window?.CSS?.env?. ?.('safe-area-inset-top') ?? 0
-    }
-    return 0
-  }, [])
-
-  const safeAreaBottom = useMemo(() => {
-    if (typeof window !== 'undefined') {
-      return window?.CSS?.env?. ?.('safe-area-inset-bottom') ?? 0
-    }
-    return 0
-  }, [])
-
   return (
     <header className={`bg-[#0f2e2a] text-white sticky top-0 z-40 border-b border-[rgba(255,255,255,0.1)] shadow-md ${className}`}>
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,18 +95,10 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
             })}
           </nav>
 
-          {/* Right actions: search + QR - hidden on mobile, shown on desktop */}
+          {/* Right actions */}
           <div className="hidden sm:flex items-center gap-2">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[rgba(255,255,255,0.6)]" />
-              <input
-                id="header-search"
-                type="search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Buscar lugares, hoteles, restaurantes…"
-                className="hidden"
-              />
             </div>
             <Link
               to="/escanear"
