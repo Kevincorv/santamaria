@@ -61,7 +61,8 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
   return (
     <header className={`bg-[#102D2B] text-white sticky top-0 z-40 border-b border-[#183D38] shadow-md ${className}`}>
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 gap-4">
+        <div className="flex items-center justify-between h-20">
+
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group shrink-0">
             <div className="text-white/95 group-hover:text-emerald-300 transition-colors">
@@ -77,9 +78,8 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
             </div>
           </Link>
 
-          {/* Desktop Navigation - ALL LINKS VISIBLE */}
-
-          <nav className="flex items-center gap-5" aria-label="Navegación principal">
+          {/* Desktop Navigation: hidden on mobile, visible on sm+ */}
+          <nav className="hidden sm:flex items-center gap-5" aria-label="Navegación principal">
             {navLinks.map((item) => {
               const isActive =
                 item.href === '/'
@@ -103,7 +103,7 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
             })}
           </nav>
 
-          {/* Right actions: search + QR */}
+          {/* Right actions: search + QR - hidden on mobile */}
           <div className="hidden md:flex items-center gap-3 shrink-0">
             <form onSubmit={handleSearch} role="search" className="flex items-center">
               <label htmlFor="header-search" className="sr-only">
@@ -135,8 +135,8 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
             </Link>
           </div>
 
-          {/* Mobile hamburger */}
-          <div className="flex items-center gap-2 xl:hidden">
+          {/* Mobile hamburger - hidden on md+ */}
+          <div className="flex items-center gap-2 md:hidden">
             <Link
               to="/lugares"
               className="p-2 text-white hover:bg-[#183D38] rounded-lg transition-colors"
@@ -156,8 +156,8 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
 
           {/* Mobile menu overlay / drawer */}
           {mobileMenuOpen && (
-            <div className="fixed inset-0 bg-[#102D2B]/95 backdrop-blur-sm z-50 flex flex-col">
-              <nav className="flex flex-col w-full overflow-y-auto max-h-[calc(100vh_-_80px)] px-4 py-4 gap-4 text-white">
+            <div className="fixed inset-0 bg-[#102D2B]/95 backdrop-blur-sm z-50 flex flex-col pt-20">
+              <nav className="flex flex-col w-full max-h-[calc(100vh_-_80px)] overflow-y-auto px-4 py-4 gap-4 text-white">
                 {navLinks.map((item) => {
                   const isActive =
                     item.href === '/'
