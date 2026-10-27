@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#102D2B" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -20,6 +20,18 @@
 
     <!-- Leaflet CSS for interactive maps -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <style>
+      /* Box-sizing global para evitar overflow */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      /* Evitar scroll horizontal */
+      html, body, #root {
+        overflow-x: hidden;
+      }
+    </style>
   </head>
   <body class="bg-[#F7F4ED] text-[#202724] antialiased">
     <div id="root"></div>

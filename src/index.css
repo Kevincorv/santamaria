@@ -1,108 +1,31 @@
-@import "tailwindcss";
-
-/* Box-sizing border-box para evitar que el padding aumente el ancho total */
+/* Box-sizing global para evitar que el padding aumente el ancho total */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-@theme {
-  --color-petrol-dark: #102D2B;
-  --color-petrol-medium: #183D38;
-  --color-petrol-accent: #28685A;
-  --color-petrol-light: #3D8C7B;
-  --color-cream-warm: #F7F4ED;
-  --color-text-main: #202724;
-  --color-text-muted: #68716B;
-  --color-border-warm: #E5E3DC;
-
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-script: 'Caveat', cursive;
+/* Evitar scroll horizontal - regla crítica */
+html, body, #root {
+  overflow-x: hidden;
 }
 
+/* Safe areas iOS - header */
+header {
+  padding-top: env(safe-area-inset-top);
+}
+
+/* Safe areas iOS - footer */
+footer {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Evitar scroll en el body */
 body {
-  margin: 0;
-  font-family: var(--font-sans);
-  background-color: var(--color-cream-warm);
-  color: var(--color-text-main);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-.font-script {
-  font-family: var(--font-script);
-}
-
-/* Recorte de texto en tarjetas */
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* Vista imprimible del placa QR */
-@media print {
-  body * {
-    visibility: hidden;
-  }
-  .print-area,
-  .print-area * {
-    visibility: visible;
-  }
-  .print-area {
-    position: absolute;
-    left: 50%;
-    top: 2cm;
-    transform: translateX(-50%);
-    border: none !important;
-    box-shadow: none !important;
-  }
-  .print\:hidden {
-    display: none !important;
-  }
-}
-
-.font-serif {
-  font-family: var(--font-serif);
-}
-
-/* Custom leaflet tweaks for seamless aesthetics */
-.leaflet-container {
-  font-family: var(--font-sans) !important;
-  width: 100%;
-  height: 100%;
-  border-radius: 1rem;
-}
-
-.leaflet-popup-content-wrapper {
-  border-radius: 0.75rem !important;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
-  padding: 0 !important;
-}
-
-.leaflet-popup-content {
-  margin: 0 !important;
-  line-height: 1.4 !important;
-}
-
-/* Glassmorphism utility for hero elements */
-.glass-pill {
-  background: rgba(16, 45, 43, 0.65);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.glass-pill:hover {
-  background: rgba(24, 61, 56, 0.85);
-  border-color: rgba(255, 255, 255, 0.35);
+/* Scrollbar invisible pero funcional */
+::-webkit-scrollbar {
+  display: none;
 }
