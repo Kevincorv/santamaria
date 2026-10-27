@@ -12,7 +12,7 @@ export default defineConfig({
         name: 'Santa María de Fe Digital',
         short_name: 'Santa María',
         description: 'Guía turística digital de Santa María de Fe, Misiones',
-        theme_color: '#166534',
+        theme_color: '#102D2B',
         background_color: '#ffffff',
         display: 'standalone',
         start_url: '/',
