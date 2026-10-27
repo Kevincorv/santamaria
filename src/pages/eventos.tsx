@@ -134,7 +134,7 @@ export const EventosPage: React.FC = () => {
             const verified = c.verificationStatus.status === 'verified'
             return (
               <article key={c.id} className="bg-white rounded-2xl border border-[#E5E3DC] shadow-sm overflow-hidden flex flex-col">
-                <SmartImage src={c.image} alt={c.title} className="w-full h-52" />
+                <SmartImage src={c.image} alt={c.title} className="w-full h-[200px]" />
                 <div className="p-6 flex-1 flex flex-col">
                   <div className="flex items-center justify-between gap-3">
                     <span

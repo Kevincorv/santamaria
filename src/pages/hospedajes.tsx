@@ -64,7 +64,7 @@ export const HospedajesPage: React.FC = () => {
                 className="bg-white rounded-2xl border border-[#E5E3DC] shadow-sm overflow-hidden flex flex-col"
               >
                 <Link to={`/hospedajes/${a.slug}`} className="block">
-                  <SmartImage src={a.images[0]} alt={a.name} className="w-full h-56" />
+                  <SmartImage src={a.images[0]} alt={a.name} className="w-full h-[220px]" />
                 </Link>
 
                 <div className="p-6 flex-1 flex flex-col">

@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* Box-sizing border-box para evitar que el padding aumente el ancho total */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 @theme {
   --color-petrol-dark: #102D2B;
   --color-petrol-medium: #183D38;

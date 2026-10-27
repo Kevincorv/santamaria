@@ -58,7 +58,7 @@ export const GastronomiaPage: React.FC = () => {
                   className="bg-white rounded-2xl border border-[#E5E3DC] shadow-sm overflow-hidden flex flex-col"
                 >
                   <Link to={`/gastronomia/${r.slug}`} className="block">
-                    <SmartImage src={r.images[0]} alt={r.name} className="w-full h-44" />
+                    <SmartImage src={r.images[0]} alt={r.name} className="w-full h-[150px]" />
                   </Link>
                   <div className="p-5 flex-1 flex flex-col">
                     <div className="flex items-start justify-between gap-3">

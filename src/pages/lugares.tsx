@@ -118,7 +118,7 @@ export const PlacesCatalog: React.FC = () => {
                 <SmartImage
                   src={place.images[0]}
                   alt={place.name}
-                  className="w-full h-52"
+                  className="w-full h-[200px]"
                   imgClassName="group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="p-5">

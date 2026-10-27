@@ -63,7 +63,7 @@ export const ItinerariosPage: React.FC = () => {
                   <SmartImage
                     src={it.image}
                     alt={it.title}
-                    className="w-full h-56 lg:h-full"
+                    className="w-full h-[220px] lg:h-full"
                     imgClassName="object-cover object-center"
                   />
                 </div>

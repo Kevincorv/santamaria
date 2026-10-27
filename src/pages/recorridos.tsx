@@ -44,7 +44,7 @@ export const RecorridosPage: React.FC = () => {
             return (
               <article key={tour.id} className="bg-white rounded-2xl border border-[#E5E3DC] shadow-sm overflow-hidden">
                 <div className="grid grid-cols-1 md:grid-cols-[320px_1fr]">
-                  <SmartImage src={tour.image} alt={tour.title} className="w-full h-56 md:h-full min-h-[220px]" />
+                  <SmartImage src={tour.image} alt={tour.title} className="w-full h-[220px] md:h-full" />
 
                   <div className="p-6 sm:p-8">
                     <div className="flex items-center justify-between gap-3">
