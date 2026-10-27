@@ -91,7 +91,7 @@ const buildIndex = (): SearchResult[] => {
       slug: a.slug,
       name: a.name,
       description: a.shortDescription,
-      href: `/hospedajes`,
+      href: `/hospedajes/${a.slug}`,
       image: a.images[0],
       hasCoordinates: Boolean(a.coordinates),
     })

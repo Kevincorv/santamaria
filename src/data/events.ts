@@ -18,6 +18,7 @@ export const celebrations: Celebration[] = [
       'Santa María de Fe celebra cada 8 de septiembre la fiesta de su patrona, la Natividad de la Santísima Virgen, con procesión y misa mayor. En 2026 la celebración contó con una procesión a las 8:00 y una misa solemne a las 9:00 presidida por el obispo de la diócesis. La misma fecha conmemora además el aniversario de fundación de la reducción, que se remonta al 8 de septiembre de 1647.',
     category: 'religiosa',
     when: '8 de septiembre de cada año (fecha tradicional)',
+    schedule: 'Procesión a las 08:00 y misa solemne a las 09:00 (programa 2026).',
     venue: 'Iglesia de Santa María de Fe y Plaza Mariscal Estigarribia',
     image: '/images/commons/plaza-iglesia-01.jpg',
     coordinates: { latitude: -26.7825265, longitude: -56.9450719 },
@@ -40,6 +41,7 @@ export const celebrations: Celebration[] = [
       'Cada Viernes Santo, miles de peregrinos ascienden desde muy temprano al Kurusu Cerro para pagar promesas, con salida tradicional desde el centro de la ciudad. En 2024 se estimó la concurrencia de unas 15.000 personas entre el Jueves y el Viernes Santo. En la base del cerro se instalan artesanos y hay estacionamientos; el ingreso al cerro es gratuito.',
     category: 'religiosa',
     when: 'Viernes Santo del calendario litúrgico (tradición anual)',
+    schedule: 'Ascenso desde la madrugada; la mayoría de los peregrinos sube durante la mañana.',
     venue: 'Kurusu Cerro (Cerro de Santa María), a unos 9 km del casco urbano',
     image: '/images/commons/acceso-ruta.jpg',
     verificationStatus: {
@@ -61,6 +63,7 @@ export const celebrations: Celebration[] = [
       'La Semana Santa es el período de mayor movimiento del año: la peregrinación al Kurusu Cerro, las celebraciones en la iglesia parroquial y la visita de familias de todo el departamento convierten a Santa María de Fe en uno de los destinos religiosos más importantes de Misiones. Los monos de la plaza y el museo jesuítico completan la oferta para quienes visitan en estas fechas.',
     category: 'religiosa',
     when: 'Semana Santa (fechas móviles según calendario litúrgico)',
+    schedule: 'Celebraciones en la parroquia durante toda la semana; el Viernes Santo se realiza la peregrinación.',
     venue: 'Iglesia parroquial, Plaza Mariscal Estigarribia y Kurusu Cerro',
     image: '/images/commons/mono-caraya-02.jpg',
     verificationStatus: {

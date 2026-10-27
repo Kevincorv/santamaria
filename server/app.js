@@ -105,6 +105,61 @@ export async function createApp() {
 
   /* ------------------------------ Contenido ------------------------------ */
 
+  /*
+   * Registro público de prestadores. Guarda la solicitud en la tabla content
+   * con estado "pending" para que el equipo la revise en el panel de admin.
+   * No publica nada automáticamente.
+   */
+  const requestLog = new Map()
+
+  app.post('/api/provider-requests', async (req, res) => {
+    const ip = (req.headers['x-forwarded-for'] || req.socket?.remoteAddress || 'unknown')
+      .toString()
+      .split(',')[0]
+      .trim()
+    const now = Date.now()
+    const recent = (requestLog.get(ip) || []).filter((t) => now - t < 60 * 60 * 1000)
+    if (recent.length >= 5) {
+      return respond(res, 429, { ok: false, error: 'too_many_requests' })
+    }
+
+    const body = req.body || {}
+    const clean = (value, max) => String(value ?? '').trim().slice(0, max)
+    const data = {
+      businessName: clean(body.businessName, 120),
+      businessType: clean(body.businessType, 60),
+      ownerName: clean(body.ownerName, 120),
+      phone: clean(body.phone, 40),
+      email: clean(body.email, 160),
+      address: clean(body.address, 200),
+      description: clean(body.description, 1200),
+      website: clean(body.website, 200),
+      status: 'pending',
+      submittedAt: new Date().toISOString(),
+    }
+
+    if (
+      !data.businessName ||
+      !data.businessType ||
+      !data.ownerName ||
+      !data.phone ||
+      !data.address ||
+      data.description.length < 40
+    ) {
+      return respond(res, 400, { ok: false, error: 'missing_fields' })
+    }
+    if (body.authorization !== true) {
+      return respond(res, 400, { ok: false, error: 'authorization_required' })
+    }
+
+    const id = `sol-${now}-${Math.random().toString(36).slice(2, 8)}`
+    const store = await getStore()
+    await store.saveContent('provider_requests', id, data, 'public-web')
+
+    requestLog.set(ip, [...recent, now])
+    respond(res, 201, { ok: true, id, status: 'pending' })
+  })
+
   app.get('/api/content/:type', requireAuth, async (req, res) => {
     const { type } = req.params
     if (!CONTENT_TYPES.includes(type)) {

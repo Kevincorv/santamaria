@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { Menu, X, QrCode, Search, ChevronRight } from 'lucide-react'
+import { Menu, X, QrCode, Search, ChevronRight, ChevronDown } from 'lucide-react'
 
 export interface HeaderProps {
   className?: string
@@ -26,23 +26,45 @@ export const ChurchIcon: React.FC<{ className?: string }> = ({ className = 'w-7 
   </svg>
 )
 
-const navLinks = [
+/** Las tres acciones principales del portal. */
+const primaryLinks = [
+  { title: 'Qué visitar', href: '/lugares' },
+  { title: 'Dónde dormir', href: '/hospedajes' },
+  { title: 'Cómo llegar', href: '/informacion-util' },
+]
+
+/** Resto de las secciones, agrupadas en el menú "Más". */
+const moreLinks = [
   { title: 'Inicio', href: '/' },
-  { title: 'Lugares', href: '/lugares' },
-  { title: 'Mapa', href: '/mapa' },
+  { title: 'Mapa interactivo', href: '/mapa' },
   { title: 'Historia', href: '/historia' },
-  { title: 'Hospedajes', href: '/hospedajes' },
   { title: 'Gastronomía', href: '/gastronomia' },
   { title: 'Artesanías', href: '/artesania' },
-  { title: 'Eventos', href: '/eventos' },
+  { title: 'Eventos y agenda', href: '/eventos' },
   { title: 'Recorridos', href: '/recorridos' },
+  { title: 'Itinerarios', href: '/itinerarios' },
+  { title: 'Idiomas', href: '/idiomas' },
+  { title: 'Registro de prestadores', href: '/registro-prestadores' },
 ]
+
+const navLinks = [...primaryLinks, ...moreLinks]
 
 export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [moreOpen, setMoreOpen] = useState(false)
   const [query, setQuery] = useState('')
   const location = useLocation()
   const navigate = useNavigate()
+
+  useEffect(() => {
+    setMobileMenuOpen(false)
+    setMoreOpen(false)
+  }, [location.pathname])
+
+  const isActive = (href: string) =>
+    href === '/' ? location.pathname === '/' : location.pathname.startsWith(href)
+
+  const moreActive = moreLinks.some((item) => isActive(item.href))
 
   const handleSearch = (event: React.FormEvent) => {
     event.preventDefault()
@@ -70,29 +92,56 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation: 3 acciones + Más */}
           <nav className="hidden xl:flex items-center gap-5" aria-label="Navegación principal">
-            {navLinks.map((item) => {
-              const isActive =
-                item.href === '/'
-                  ? location.pathname === '/'
-                  : location.pathname.startsWith(item.href)
+            {primaryLinks.map((item) => (
+              <Link
+                key={item.title}
+                to={item.href}
+                className={`text-[13px] tracking-wide font-medium transition-colors hover:text-emerald-300 relative py-1 whitespace-nowrap ${
+                  isActive(item.href) ? 'text-white font-semibold' : 'text-[#E5E3DC]/85'
+                }`}
+              >
+                {item.title}
+                {isActive(item.href) && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-emerald-400 rounded-full" />
+                )}
+              </Link>
+            ))}
 
-              return (
-                <Link
-                  key={item.title}
-                  to={item.href}
-                  className={`text-[13px] tracking-wide font-medium transition-colors hover:text-emerald-300 relative py-1 whitespace-nowrap ${
-                    isActive ? 'text-white font-semibold' : 'text-[#E5E3DC]/85'
-                  }`}
-                >
-                  {item.title}
-                  {isActive && (
-                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-emerald-400 rounded-full" />
-                  )}
-                </Link>
-              )
-            })}
+            <div className="relative" onMouseLeave={() => setMoreOpen(false)}>
+              <button
+                type="button"
+                onClick={() => setMoreOpen((open) => !open)}
+                aria-expanded={moreOpen}
+                aria-haspopup="true"
+                className={`inline-flex items-center gap-1 text-[13px] tracking-wide font-medium transition-colors hover:text-emerald-300 py-1 ${
+                  moreActive ? 'text-white font-semibold' : 'text-[#E5E3DC]/85'
+                }`}
+              >
+                Más
+                <ChevronDown
+                  className={`w-3.5 h-3.5 transition-transform ${moreOpen ? 'rotate-180' : ''}`}
+                  aria-hidden="true"
+                />
+              </button>
+              {moreOpen && (
+                <div className="absolute right-0 top-full mt-2 w-60 rounded-2xl bg-white text-[#202724] shadow-xl border border-[#E5E3DC] py-2 z-50">
+                  {moreLinks.map((item) => (
+                    <Link
+                      key={item.title}
+                      to={item.href}
+                      onClick={() => setMoreOpen(false)}
+                      className={`block px-4 py-2 text-sm transition-colors hover:bg-[#F7F4ED] hover:text-[#18685A] ${
+                        isActive(item.href) ? 'text-[#18685A] font-semibold' : 'text-gray-700'
+                      }`}
+                    >
+                      {item.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </nav>
 
           {/* Right actions: search + QR */}
@@ -171,28 +220,45 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
               <Search className="w-4 h-4" />
             </button>
           </form>
-          <nav className="flex flex-col space-y-1" aria-label="Navegación móvil">
-            {navLinks.map((item) => (
+          <nav aria-label="Navegación móvil">
+            <div className="grid grid-cols-3 gap-2 mb-3">
+              {primaryLinks.map((item) => (
+                <Link
+                  key={item.title}
+                  to={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="rounded-xl bg-white/10 border border-white/10 px-3 py-3 text-center text-xs font-semibold text-white hover:bg-white/20 transition-colors"
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </div>
+            <p className="px-3 pt-2 pb-1 text-[11px] uppercase tracking-wider font-semibold text-[#E5E3DC]/50">
+              Más secciones
+            </p>
+            <div className="flex flex-col space-y-1">
+              {moreLinks.map((item) => (
+                <Link
+                  key={item.title}
+                  to={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-between py-2.5 px-3 rounded-lg text-sm text-[#E5E3DC] hover:text-white hover:bg-[#183D38]/60"
+                >
+                  <span>{item.title}</span>
+                  <ChevronRight className="w-4 h-4 text-white/40" />
+                </Link>
+              ))}
               <Link
-                key={item.title}
-                to={item.href}
+                to="/escanear"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-between py-2.5 px-3 rounded-lg text-sm text-[#E5E3DC] hover:text-white hover:bg-[#183D38]/60"
+                className="flex items-center justify-between py-2.5 px-3 rounded-lg text-sm text-emerald-300 bg-emerald-950/40 mt-2 font-medium"
               >
-                <span>{item.title}</span>
-                <ChevronRight className="w-4 h-4 text-white/40" />
+                <span className="flex items-center gap-2">
+                  <QrCode className="w-4 h-4" /> Escanear código QR
+                </span>
+                <ChevronRight className="w-4 h-4" />
               </Link>
-            ))}
-            <Link
-              to="/escanear"
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-between py-2.5 px-3 rounded-lg text-sm text-emerald-300 bg-emerald-950/40 mt-2 font-medium"
-            >
-              <span className="flex items-center gap-2">
-                <QrCode className="w-4 h-4" /> Escanear código QR
-              </span>
-              <ChevronRight className="w-4 h-4" />
-            </Link>
+            </div>
           </nav>
         </div>
       )}

@@ -27,6 +27,7 @@ import {
   Check,
   CalendarDays,
   Share2,
+  Route,
 } from 'lucide-react'
 
 const quickAccessItems = [
@@ -37,7 +38,7 @@ const quickAccessItems = [
   { label: 'Hoteles', icon: Bed, href: '/hospedajes' },
   { label: 'Gastronomía', icon: Utensils, href: '/gastronomia' },
   { label: 'Artesanías', icon: Scissors, href: '/artesania' },
-  { label: 'Recorridos', icon: Compass, href: '/recorridos' },
+  { label: 'Itinerarios', icon: Route, href: '/itinerarios' },
 ]
 
 export const Home: React.FC = () => {
@@ -99,7 +100,7 @@ export const Home: React.FC = () => {
 
               <div className="hidden lg:block text-right select-none pt-6">
                 <span className="font-script text-3xl xl:text-4xl text-amber-200/90 block -rotate-6">
-                  Conoce
+                  Conocé
                 </span>
                 <span className="font-script text-3xl xl:text-4xl text-amber-200/90 block rotate-3 ml-8">
                   Explorá
@@ -162,6 +163,10 @@ export const Home: React.FC = () => {
                 </div>
               </div>
             </div>
+
+            <p className="mt-6 text-[11px] text-[#E5E3DC]/60">
+              Portada: plaza e iglesia de Santa María de Fe, en el casco histórico del pueblo.
+            </p>
           </div>
         </section>
 
@@ -237,7 +242,7 @@ export const Home: React.FC = () => {
                   Dormí en Santa María
                 </h2>
                 <p className="text-gray-600 text-sm sm:text-base mt-2 max-w-2xl">
-                  El Santa María Hotel financia becas universitarias; el proyecto Pueblo Hotel integra casas de familia de la comunidad.
+                  El Santa María Hotel financia becas universitarias; los hospedajes y posadas del distrito se listan con su contacto directo.
                 </p>
               </div>
               <Link
@@ -252,7 +257,7 @@ export const Home: React.FC = () => {
               {accommodations.slice(0, 3).map((a) => (
                 <Link
                   key={a.id}
-                  to="/hospedajes"
+                  to={`/hospedajes/${a.slug}`}
                   className="group bg-[#F7F4ED] rounded-2xl border border-[#E5E3DC] overflow-hidden hover:shadow-lg transition-all"
                 >
                   <SmartImage
@@ -289,7 +294,7 @@ export const Home: React.FC = () => {
                 <div>
                   <p className="font-serif text-xl font-bold">¿Querés ver más opciones?</p>
                   <p className="text-sm text-[#E5E3DC]/80">
-                    Hospedajes, posadas y la iniciativa comunitaria Pueblo Hotel.
+                    Hospedajes, posadas y hoteles del distrito, con contacto directo y ficha completa.
                   </p>
                 </div>
               </div>
@@ -329,7 +334,7 @@ export const Home: React.FC = () => {
             {restaurants.slice(0, 3).map((r) => (
               <Link
                 key={r.id}
-                to="/gastronomia"
+                to={`/gastronomia/${r.slug}`}
                 className="group bg-white rounded-2xl border border-[#E5E3DC] shadow-sm overflow-hidden hover:shadow-lg transition-all"
               >
                 <SmartImage

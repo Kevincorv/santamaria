@@ -96,7 +96,7 @@ export const restaurants: Restaurant[] = [
     category: 'gastronomia',
     categoryLabel: 'Gastronomía local',
     shortDescription:
-      'Restaurante del centro registrada en OpenStreetMap y en directorios turísticos, en Independencia Nacional y 8 de Septiembre.',
+      'Restaurante del centro registrado en OpenStreetMap y en directorios turísticos, en Independencia Nacional y 8 de Septiembre.',
     description:
       'Dolce Aroma figura en OpenStreetMap como restaurante con cocina de hamburguesas y sándwiches, y en el directorio Ahendu en Independencia Nacional y 8 de Septiembre. No se encontraron publicados menú oficial, precios ni teléfono.',
     images: ['/images/commons/calle-01.jpg'],

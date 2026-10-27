@@ -88,6 +88,8 @@ export interface Celebration {
   category: 'religiosa' | 'cultural' | 'deportiva' | 'gastronomica'
   /** Fecha o periodo tradicional; nunca fechas futuras inventadas. */
   when: string
+  /** Horarios publicados o pauta tradicional, sin inventar horas. */
+  schedule?: string
   venue?: string
   image?: string
   coordinates?: Coordinates

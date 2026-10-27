@@ -22,6 +22,7 @@ export const CONTENT_TYPES = [
   'crafts',
   'experiences',
   'tours',
+  'provider_requests',
 ]
 
 const SQLITE_SCHEMA = `

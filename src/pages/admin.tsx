@@ -36,6 +36,7 @@ const TYPES = [
   { key: 'crafts', label: 'Artesanías' },
   { key: 'experiences', label: 'Experiencias' },
   { key: 'tours', label: 'Recorridos' },
+  { key: 'provider_requests', label: 'Solicitudes de prestadores' },
 ] as const
 
 type TypeKey = (typeof TYPES)[number]['key']

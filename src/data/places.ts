@@ -63,7 +63,7 @@ export const places: Place[] = [
     description:
       'La iglesia parroquial de Santa María de Fe es el edificio más querido del pueblo. Sobre el terreno del antiguo templo de la reducción se levantó el templo actual, que conserva imágenes talladas por artesanos guaraníes en los siglos XVII y XVIII. Junto con el museo contiguo, forma el conjunto monumental que define el casco histórico de la ciudad.',
     history:
-      'La iglesia original de la reducción fue destruida por un incendio en 1889. La tradición local recuerda queNumerous imágenes talladas en madera por los nativos guaraníes pudieron ser rescatadas del fuego por los vecinos, y hoy presiden el altar del templo actual y las salas del museo. Conviene señalar que existe una discusión historiográfica sobre si el incendio fue el único causante de la destrucción del templo original, cuestión documentada en la propia Wikipedia hispanohablante a partir de una nota de ABC Color de 2009.',
+      'La iglesia original de la reducción fue destruida por un incendio en 1889. La tradición local recuerda que numerosas imágenes talladas en madera por los nativos guaraníes pudieron ser rescatadas del fuego por los vecinos, y hoy presiden el altar del templo actual y las salas del museo. Conviene señalar que existe una discusión historiográfica sobre si el incendio fue el único causante de la destrucción del templo original, cuestión documentada en la propia Wikipedia hispanohablante a partir de una nota de ABC Color de 2009.',
     images: [
       '/images/commons/iglesia-fachada.jpg',
       '/images/iglesia-san-rafael.jpg',
@@ -246,7 +246,7 @@ export const places: Place[] = [
     shortDescription:
       'Comunidad contemplativa masculina de espiritualidad ignaciana que sostiene un taller artesanal de dulces y mermeladas a leña.',
     description:
-      'La comunidad monástica de Santa María de Fe (comunidad monástica San José) es una comunidad contemplativa masculina de espiritualidad ignaciana, nacida en Asunción con acompañamiento de la Compañía de Jesús y radicada en el centro de Santa María de Fe. Además de la vida de oración, sostiene el "Taller del Monasterio", una producción artesanal de mermoladas, dulces, licores, condimentos y artículos religiosos elaborados a leña y sin conservantes.',
+      'La comunidad monástica de Santa María de Fe (comunidad monástica San José) es una comunidad contemplativa masculina de espiritualidad ignaciana, nacida en Asunción con acompañamiento de la Compañía de Jesús y radicada en el centro de Santa María de Fe. Además de la vida de oración, sostiene el "Taller del Monasterio", una producción artesanal de mermeladas, dulces, licores, condimentos y artículos religiosos elaborados a leña y sin conservantes.',
     images: ['/images/calle-colonial.jpg'],
     coordinates: { latitude: -26.782243, longitude: -56.946188 },
     coordinatesSource: 'Google Maps (enlace: https://www.google.com/maps/place/Monasterio+Santa+Mar%C3%ADa+de+Fe)',
@@ -475,7 +475,7 @@ export const places: Place[] = [
     coordinates: { latitude: -26.784998, longitude: -56.951046 },
     coordinatesSource: 'Google Maps (enlace: https://www.google.com/maps/place/Polideportivo+Municipal+de+Santa+Maria)',
     address: {
-      street: 'Centro urbano, a pocos cuadras de la plaza principal',
+      street: 'Centro urbano, a pocas cuadras de la plaza principal',
       city: 'Santa María de Fe',
       region: 'Misiones',
       country: 'Paraguay',
@@ -489,7 +489,7 @@ export const places: Place[] = [
     sources: [
       { title: 'Google Maps — Polideportivo Municipal de Santa María', url: 'https://www.google.com/maps/place/Polideportivo+Municipal+de+Santa+Maria' },
     ],
-    access: 'En el centro urbano, a pocos cuadras de la plaza principal.',
+    access: 'En el centro urbano, a pocas cuadras de la plaza principal.',
     recommendations: [
       'Ideal para practicar deportes y actividades recreativas.',
       'Durante la Semana Santa el complejo recibe gran afluencia de público.',

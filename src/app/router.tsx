@@ -29,8 +29,16 @@ export const router = createBrowserRouter([
     lazy: async () => ({ Component: (await import('../pages/hospedajes')).HospedajesPage }),
   },
   {
+    path: '/hospedajes/:slug',
+    lazy: async () => ({ Component: (await import('../pages/negocio-detalle')).AlojamientoDetallePage }),
+  },
+  {
     path: '/gastronomia',
     lazy: async () => ({ Component: (await import('../pages/gastronomia')).GastronomiaPage }),
+  },
+  {
+    path: '/gastronomia/:slug',
+    lazy: async () => ({ Component: (await import('../pages/negocio-detalle')).LocalDetallePage }),
   },
   {
     path: '/artesania',
@@ -43,6 +51,24 @@ export const router = createBrowserRouter([
   {
     path: '/recorridos',
     lazy: async () => ({ Component: (await import('../pages/recorridos')).RecorridosPage }),
+  },
+  {
+    path: '/itinerarios',
+    lazy: async () => ({ Component: (await import('../pages/itinerarios')).ItinerariosPage }),
+  },
+  {
+    path: '/informacion-util',
+    lazy: async () => ({ Component: (await import('../pages/informacion-util')).InformacionUtilPage }),
+  },
+  {
+    path: '/idiomas',
+    lazy: async () => ({ Component: (await import('../pages/idiomas')).IdiomasPage }),
+  },
+  {
+    path: '/registro-prestadores',
+    lazy: async () => ({
+      Component: (await import('../pages/registro-prestadores')).RegistroPrestadoresPage,
+    }),
   },
   {
     path: '/escanear',

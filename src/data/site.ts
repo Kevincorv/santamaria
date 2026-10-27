@@ -39,5 +39,17 @@ export const DATA_REVIEW_DATE = '2026-10-26'
 /** Texto estándar para datos sin confirmar. */
 export const CONSULTAR_PREVIAMENTE = 'Consultar previamente'
 
+/**
+ * WhatsApp turístico central.
+ * Se define con VITE_TOURISM_WHATSAPP cuando la Municipalidad confirme el
+ * número oficial. Mientras esté vacío, el botón flotante no se muestra y la
+ * página de información útil lo indica como "en habilitación".
+ */
+export const TOURISM_WHATSAPP = ((import.meta.env.VITE_TOURISM_WHATSAPP as string | undefined) || '')
+  .replace(/[^\d]/g, '')
+
+export const TOURISM_WHATSAPP_HOURS =
+  'Horario de atención a confirmar con la Municipalidad de Santa María de Fe.'
+
 export const PLACEHOLDER_ALT_TEXT =
   'Fotografía pendiente de incorporar de Santa María de Fe'

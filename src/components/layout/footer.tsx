@@ -87,6 +87,26 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/itinerarios" className="hover:text-emerald-300 transition-colors">
+                  Itinerarios armados
+                </Link>
+              </li>
+              <li>
+                <Link to="/informacion-util" className="hover:text-emerald-300 transition-colors">
+                  Información útil
+                </Link>
+              </li>
+              <li>
+                <Link to="/idiomas" className="hover:text-emerald-300 transition-colors">
+                  Guía de idiomas
+                </Link>
+              </li>
+              <li>
+                <Link to="/registro-prestadores" className="hover:text-emerald-300 transition-colors">
+                  Registro de prestadores
+                </Link>
+              </li>
+              <li>
                 <Link to="/escanear" className="hover:text-emerald-300 transition-colors flex items-center gap-2">
                   <QrCode className="w-4 h-4 text-emerald-300" />
                   <span>Escaneo de códigos QR</span>
