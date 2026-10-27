@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'icons.svg'],
+      includeAssets: ['favicon.svg', 'icons.svg', 'apple-touch-icon.png'],
       manifest: {
         name: 'Santa María de Fe Digital',
         short_name: 'Santa María',
@@ -18,14 +18,16 @@ export default defineConfig({
         start_url: '/',
         icons: [
           {
-            src: '/favicon.svg',
+            src: '/images/logo-pestana-192.png',
             sizes: '192x192',
-            type: 'image/svg+xml',
+            type: 'image/png',
+            purpose: 'any',
           },
           {
-            src: '/icons.svg',
+            src: '/images/logo-pestana-512.png',
             sizes: '512x512',
-            type: 'image/svg+xml',
+            type: 'image/png',
+            purpose: 'any maskable',
           },
         ],
       },
