@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useMemo } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Menu, X, QrCode, Search } from 'lucide-react'
 
@@ -51,24 +51,6 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
     { title: 'Recorridos', href: '/recorridos' },
   ]
 
-  // Safe area insets for iOS
-  const safeAreaTop = useMemo(() => {
-    if (typeof window !== 'undefined') {
-      // Usar CSS.env para safe areas de iOS (Safari support)
-      const top = window.CSS?.env?.('safe-area-inset-top')
-      return typeof top === 'string' ? parseInt(top) : 0
-    }
-    return 0
-  }, [])
-
-  const safeAreaBottom = useMemo(() => {
-    if (typeof window !== 'undefined') {
-      const bottom = window.CSS?.env?.('safe-area-inset-bottom')
-      return typeof bottom === 'string' ? parseInt(bottom) : 0
-    }
-    return 0
-  }, [])
-
   return (
     <header className={`bg-[#0f2e2a] text-white sticky top-0 z-40 border-b border-[rgba(255,255,255,0.1)] shadow-md ${className}`}>
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -113,18 +95,10 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
             })}
           </nav>
 
-          {/* Right actions: search + QR - hidden on mobile, shown on desktop */}
+          {/* Right actions */}
           <div className="hidden sm:flex items-center gap-2">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[rgba(255,255,255,0.6)]" />
-              <input
-                id="header-search"
-                type="search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Buscar lugares, hoteles, restaurantes…"
-                className="hidden"
-              />
             </div>
             <Link
               to="/escanear"
@@ -156,7 +130,7 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
 
           {/* Mobile menu overlay / drawer */}
           {mobileMenuOpen && (
-            <div className="fixed inset-0 bg-[#0f2e2a]/98 backdrop-blur-zxl z-50 flex flex-col pt-20 padding-y-4">
+            <div className="fixed inset-0 bg-[#0f2e2a]/98 backdrop-blur-zxl z-50 flex flex-col pt-20">
               <nav className="flex flex-col w-full max-h-[calc(100vh_-_80px)] overflow-y-auto px-4 py-4 gap-4 text-white space-y-2">
                 {navLinks.map((item) => {
                   const isActive =
