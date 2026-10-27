@@ -153,6 +153,39 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
+
+          {/* Mobile menu overlay / drawer */}
+          {mobileMenuOpen && (
+            <div className="fixed inset-0 bg-[#102D2B]/95 backdrop-blur-sm z-50 flex items-center justify-center pt-20">
+              <nav className="flex-flex flex-col gap-6 max-w-none w-full px-4">
+                {navLinks.map((item) => {
+                  const isActive =
+                    item.href === '/'
+                      ? location.pathname === '/'
+                      : location.pathname.startsWith(item.href)
+
+                  return (
+                    <Link
+                      key={item.title}
+                      to={item.href}
+                      className={`text-xl font-medium text-white transition-colors hover:text-emerald-300 ${
+                        isActive ? 'text-emerald-400' : 'text-white'
+                      }`}
+                    >
+                      {item.title}
+                    </Link>
+                  )
+                })}
+                <button
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="absolute top-6 right-6 text-white/60 hover:text-white transition-colors"
+                  aria-label="Cerrar menú"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </nav>
+            </div>
+          )}
         </div>
       </div>
     </header>
