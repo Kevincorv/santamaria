@@ -157,7 +157,7 @@ export const Header: React.FC<HeaderProps> = ({ className = '' }) => {
           {/* Mobile menu overlay / drawer */}
           {mobileMenuOpen && (
             <div className="fixed inset-0 bg-[#102D2B]/95 backdrop-blur-sm z-50 flex items-center justify-center pt-20">
-              <nav className="flex-flex flex-col gap-6 max-w-none w-full px-4">
+              <nav className="flex flex-col gap-6 max-w-none w-full px-4">
                 {navLinks.map((item) => {
                   const isActive =
                     item.href === '/'
