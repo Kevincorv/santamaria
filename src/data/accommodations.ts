@@ -73,6 +73,113 @@ export const accommodations: Accommodation[] = [
     priceNote:
       'Tarifas correspondientes al año 2026 según el sitio oficial; pueden variar. Confirmá al reservar.',
   },
+  {
+    id: 'hospedaje-aguara',
+    slug: 'hospedaje-aguara',
+    name: 'Hospedaje Aguará',
+    kind: 'hospedaje',
+    category: 'alojamiento',
+    categoryLabel: 'Hospedaje',
+    shortDescription:
+      'Hospedaje del centro de Santa María de Fe con teléfono de contacto publicado en directorios turísticos.',
+    description:
+      'El Hospedaje Aguará figura en directorios turísticos paraguayos y en fichas de mapas como opción de alojamiento en el centro de Santa María de Fe. No se encontraron sitios web oficiales ni tarifas publicadas: la disponibilidad y los servicios se confirman por teléfono.',
+    images: ['/images/commons/calle-01.jpg'],
+    coordinates: { latitude: -26.7818, longitude: -56.9428 },
+    coordinatesSource:
+      'Directorio turístico Ahendu (coordenada aproximada del centro urbano); no verificada en OpenStreetMap.',
+    address: {
+      street: 'Centro de Santa María de Fe',
+      city: 'Santa María de Fe',
+      region: 'Misiones',
+      country: 'Paraguay',
+    },
+    verificationStatus: {
+      status: 'pending',
+      lastChecked: DATA_REVIEW_DATE,
+      source: 'Directorio Ahendu y fichas públicas de mapas; sin sitio oficial',
+    },
+    lastUpdated: DATA_REVIEW_DATE,
+    sources: [
+      { title: 'Ahendu — guía de San Ignacio y Santa María de Fe', url: 'https://ahendu.com.py/turismo/guia-de-san-ignacio-santa-maria/' },
+    ],
+    services: [CONSULTAR_PREVIAMENTE],
+    contact: { phone: '+595 984 780 304' },
+    access: 'Centro urbano.',
+    recommendations: ['Confirmá servicios, tarifas y horarios directamente por teléfono.'],
+    priceInfo: CONSULTAR_PREVIAMENTE,
+  },
+  {
+    id: 'posada-tio-lalo',
+    slug: 'posada-tio-lalo',
+    name: 'Posada Tío Lalo',
+    kind: 'posada',
+    category: 'alojamiento',
+    categoryLabel: 'Posada · Datos en verificación',
+    shortDescription:
+      'Posada publicada por SENATUR, pero con las fuentes en conflicto sobre el distrito al que pertenece: verificar antes de viajar.',
+    description:
+      'La Posada Tío Lalo aparece en el listado oficial de posadas turísticas de la SENATUR (febrero 2024) con el teléfono (0992) 611268, pero figura bajo el distrito de Santa Rosa, distinto de Santa María de Fe. En fichas de mapas públicas, el mismo número aparece como "Hospedaje Tío Lalo" ubicado en el centro de Santa María de Fe. Debido a esa discrepancia entre fuentes, este alojamiento se publica con estado de verificación pendiente.',
+    images: ['/images/commons/calle-01.jpg'],
+    coordinates: { latitude: -26.7827, longitude: -56.943 },
+    coordinatesSource:
+      'Ficha pública de mapas (coordenada aproximada). Contradice la ubicación del listado SENATUR (Santa Rosa); confirmar en el lugar.',
+    address: {
+      street: 'Esquina de Mariscal López y Gral. Bernardino Caballero (según ficha de mapas)',
+      city: 'Santa María de Fe (en conflicto: SENATUR lo lista en Santa Rosa)',
+      region: 'Misiones',
+      country: 'Paraguay',
+      note: 'Las fuentes difieren sobre el distrito. Verificar antes de viajar.',
+    },
+    verificationStatus: {
+      status: 'needs_update',
+      lastChecked: DATA_REVIEW_DATE,
+      source: 'Listado SENATUR de posadas turísticas (2024) vs. fichas de mapas públicas',
+    },
+    lastUpdated: DATA_REVIEW_DATE,
+    sources: [
+      { title: 'SENATUR — Listado de posadas turísticas (PDF, febrero 2024)', url: 'https://senatur.gov.py/wp-content/uploads/2024/03/listado-posadas-turisticas.pdf' },
+    ],
+    services: [CONSULTAR_PREVIAMENTE],
+    contact: { phone: '+595 992 611 268' },
+    access: CONSULTAR_PREVIAMENTE,
+    recommendations: [
+      'Llamá antes de ir: las fuentes difieren sobre si opera en Santa María de Fe o en Santa Rosa.',
+    ],
+    priceInfo: CONSULTAR_PREVIAMENTE,
+  },
+  {
+    id: 'posada-nanderoga',
+    slug: 'posada-nanderoga',
+    name: 'Posada ÑandeRoga',
+    kind: 'posada',
+    category: 'alojamiento',
+    categoryLabel: 'Posada · Datos parciales',
+    shortDescription:
+      'Posada mencionada en guías con desayuno y quincho con parrilla; sin datos de contacto publicados.',
+    description:
+      'La Posada ÑandeRoga aparece en guías turísticas locales con desayuno y quincho con parrilla, y en listados de alojamientos turísticos en línea. No se encontraron sitio web propio, teléfono ni reseñas verificables publicados, por lo que se incluye como opción a confirmar en el lugar.',
+    images: ['/images/commons/calle-01.jpg'],
+    address: {
+      street: CONSULTAR_PREVIAMENTE,
+      city: 'Santa María de Fe',
+      region: 'Misiones',
+      country: 'Paraguay',
+    },
+    verificationStatus: {
+      status: 'pending',
+      lastChecked: DATA_REVIEW_DATE,
+      source: 'Guía Ahendu y listados de alojamientos en línea sin reseñas',
+    },
+    lastUpdated: DATA_REVIEW_DATE,
+    sources: [
+      { title: 'Ahendu — guía de San Ignacio y Santa María de Fe', url: 'https://ahendu.com.py/turismo/guia-de-san-ignacio-santa-maria/' },
+    ],
+    services: ['Desayuno (mencionado en guía)', 'Quincho con parrilla (mencionado en guía)'],
+    access: CONSULTAR_PREVIAMENTE,
+    recommendations: ['Confirmá existencia, dirección y disponibilidad en la oficina de turismo local.'],
+    priceInfo: CONSULTAR_PREVIAMENTE,
+  },
 ]
 
 export const accommodationFromSlug = (slug: string): Accommodation | undefined =>

@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { ChurchIcon } from './header'
 import { MapPin, QrCode, Heart, Info } from 'lucide-react'
-import { DATA_REVIEW_DATE } from '../../data/site'
 
 export const Footer: React.FC = () => {
   return (
@@ -129,22 +128,19 @@ export const Footer: React.FC = () => {
                   Contactos de alojamientos, talleres y museo: publicados en cada ficha con su fuente.
                 </span>
               </div>
-              <div className="text-xs text-emerald-300/80 pt-1">
-                Datos revisados el {DATA_REVIEW_DATE}. Cada ficha indica su fuente y su estado de verificación.
-              </div>
             </div>
           </div>
         </div>
 
         <div className="pt-8 border-t border-[#183D38] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#E5E3DC]/60">
-          <p>© {new Date().getFullYear()} Santa María de Fe Digital. Proyecto independiente de turismo y patrimonio.</p>
+          <p>© {new Date().getFullYear()} Santa María de Fe Digital.</p>
           <p>
             Hecho con orgullo en Misiones 🇵🇾 · Desarrollado por{' '}
             <a
               href="https://www.krctechnologiess.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-emerald-300 transition-colors"
+              className="text-inherit no-underline hover:text-emerald-300 transition-colors"
             >
               KRC Technologies
             </a>

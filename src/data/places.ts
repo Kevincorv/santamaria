@@ -1,3 +1,6 @@
+import { Place, Category } from '../types/places'
+import { DATA_REVIEW_DATE, CONSULTAR_PREVIAMENTE as CONSULTAR_PREVIAMENTE_TEXT } from './site'
+
 const OSM = 'OpenStreetMap (datos georreferenciados)'
 
 export const places: Place[] = [
@@ -32,10 +35,10 @@ export const places: Place[] = [
     },
     verificationStatus: {
       status: 'verified',
-      lastChecked: '2026-10-26',
+      lastChecked: DATA_REVIEW_DATE,
       source: 'OpenStreetMap, Wikipedia (monos carayás) y fotografías de Wikimedia Commons',
     },
-    lastUpdated: '2026-10-26',
+    lastUpdated: DATA_REVIEW_DATE,
     sources: [
       { title: 'OpenStreetMap — Plaza Mariscal Estigarribia', url: 'https://www.openstreetmap.org/node/0' },
       { title: 'Wikipedia ES — Santa María de Fe (monos carayás en la Plaza Central)', url: 'https://es.wikipedia.org/wiki/Santa_Mar%C3%ADa_de_Fe' },
@@ -60,8 +63,6 @@ export const places: Place[] = [
     description:
       'La iglesia parroquial de Santa María de Fe es el edificio más querido del pueblo. Sobre el terreno del antiguo templo de la reducción se levantó el templo actual, que conserva imágenes talladas por artesanos guaraníes en los siglos XVII y XVIII. Junto con el museo contiguo, forma el conjunto monumental que define el casco histórico de la ciudad.',
     history:
-      'La iglesia original de la reducción fue destruida por un incendio en 1889. La tradición local recuerda que numerosas imágenes talladas en madera por los nativos guaraníes pudieron ser rescatadas del fuego por los vecinos, y hoy presiden el altar del templo actual y las salas del museo. Conviene señalar que existe una discusión historiográfica sobre si el incendio fue el único causante de la destrucción del templo original, cuestión documentada en la propia Wikipedia hispanohablante a partir de una nota de ABC Color de 2009.',
-    history:
       'La iglesia original de la reducción fue destruida por un incendio en 1889. La tradición local recuerda queNumerous imágenes talladas en madera por los nativos guaraníes pudieron ser rescatadas del fuego por los vecinos, y hoy presiden el altar del templo actual y las salas del museo. Conviene señalar que existe una discusión historiográfica sobre si el incendio fue el único causante de la destrucción del templo original, cuestión documentada en la propia Wikipedia hispanohablante a partir de una nota de ABC Color de 2009.',
     images: [
       '/images/commons/iglesia-fachada.jpg',
@@ -79,10 +80,10 @@ export const places: Place[] = [
     },
     verificationStatus: {
       status: 'verified',
-      lastChecked: '2026-10-26',
+      lastChecked: DATA_REVIEW_DATE,
       source: 'OpenStreetMap, Wikipedia ES y prensa nacional (ABC Color)',
     },
-    lastUpdated: '2026-10-26',
+    lastUpdated: DATA_REVIEW_DATE,
     sources: [
       { title: 'Wikipedia ES — Santa María de Fe (incendio de 1889)', url: 'https://es.wikipedia.org/wiki/Santa_Mar%C3%ADa_de_Fe' },
       { title: 'ABC Color — "Obras barrocas en Santa María de Fe" (2009)', url: 'http://archivo.abc.com.py/2009-06-21/articulos/532655/obras-barrocas-en-santa-maria-de-fe' },
@@ -108,8 +109,6 @@ export const places: Place[] = [
       'Casa de Indios convertida en museo: unas 56 imágenes barrocas guaraníes y el único pesebre completo de las 30 reducciones.',
     description:
       'El Museo Diocesano de Arte Jesuítico Guarani funciona en una de las antiguas "Casas de Indios" de la reducción, una casona colonial de adobe y tejas. Sus salas conservan alrededor de 56 imágenes talladas y policromadas por artesanos guaraníes entre los siglos XVII y XVIII, organizadas en seis salas: restos de la iglesia, santos jesuitas, santos de la Iglesia, ángeles y arcángeles, la Natividad y la Pasión. El grupo de la Natividad es considerado el único pesebre completo que se conserva de las treinta reducciones jesuítico-guaraníes.',
-    history:
-      'Las piezas del museo son restos del patrimonio de la reducción de Nuestra Señora del Taré. Tras el incendio que destruyó el templo original en 1889 y la expulsión de la Compañía de Jesús en 1767, las imágenes siguieron siendo custodiadas por la comunidad. El museo fue inaugurado el 8 de septiembre de 1981, y las piezas han sido restauradas con los mismos materiales originales.',
     images: [
       '/images/commons/museo-casa-indios.jpg',
       '/images/museo-historico.jpg',
@@ -130,10 +129,10 @@ export const places: Place[] = [
     },
     verificationStatus: {
       status: 'verified',
-      lastChecked: '2026-10-26',
+      lastChecked: DATA_REVIEW_DATE,
       source: 'SENATUR / Visit Paraguay, VíaParaguay, Portal Guaraní y OpenStreetMap',
     },
-    lastUpdated: '2026-10-26',
+    lastUpdated: DATA_REVIEW_DATE,
     sources: [
       { title: 'Visit Paraguay — Museo Diocesano de Arte Jesuítico', url: 'https://visitparaguay.travel/places/museo-diocesano-de-arte-jesuitico-santa-maria-de-fe' },
       { title: 'VíaParaguay — Museo Jesuítico de Santa María de Fe', url: 'https://viaparaguay.com/en/directorio/cultura/ficha/museo-jesuitico-santa-maria-de-fe' },
@@ -167,6 +166,8 @@ export const places: Place[] = [
     history:
       'La fuente formaba parte del sistema hidráulico de la reducción jesuítico-guaraní, junto con el acopio y distribución de agua entre los pobladores. Su uso comunitario se mantuvo durante generaciones, lo que la convierte en un testimonio vivo de la vida cotidiana de la misión.',
     images: ['/images/calle-colonial.jpg', '/images/calle-01.jpg'],
+    coordinates: { latitude: -26.784281, longitude: -56.935333 },
+    coordinatesSource: 'Google Maps (coordenadas aportadas por la Municipalidad de Santa María de Fe).',
     address: {
       street: 'Centro urbano de Santa María de Fe',
       city: 'Santa María de Fe',
@@ -175,10 +176,10 @@ export const places: Place[] = [
     },
     verificationStatus: {
       status: 'verified',
-      lastChecked: '2026-10-26',
+      lastChecked: DATA_REVIEW_DATE,
       source: 'ABC Color (2021 y 2026) y Wikipedia ES; coordenadas verificadas via Google Maps',
     },
-    lastUpdated: '2026-10-26',
+    lastUpdated: DATA_REVIEW_DATE,
     sources: [
       { title: 'ABC Color — "Restauran el histórico Ykua Teja de Santa María de Fe" (2021)', url: 'https://www.abc.com.py/nacionales/2021/07/18/restauran-el-historico-ykua-teja-de-santa-maria-de-fe/' },
       { title: 'Wikipedia ES — Santa María de Fe (Cultura)', url: 'https://es.wikipedia.org/wiki/Santa_Mar%C3%ADa_de_Fe' },
@@ -203,6 +204,8 @@ export const places: Place[] = [
     history:
       'La tradición de ascender al cerro se remonta a la época jesuítico-guaraní. Desde entonces, cada Viernes Santo miles de peregrinos suben desde muy temprano a pagar promesas: se estima que en 2024 concurrieron unas 15.000 personas entre el Jueves y el Viernes Santo.',
     images: ['/images/commons/acceso-ruta.jpg', '/images/camino-entrada.jpg'],
+    coordinates: { latitude: -26.790877, longitude: -56.880393 },
+    coordinatesSource: 'Acceso al cerro — Google Maps (coordenadas aportadas por la Municipalidad de Santa María de Fe).',
     address: {
       street: 'Cerro de Santa María, a unos 9 km del casco urbano',
       city: 'Santa María de Fe',
@@ -212,10 +215,10 @@ export const places: Place[] = [
     },
     verificationStatus: {
       status: 'verified',
-      lastChecked: '2026-10-26',
+      lastChecked: DATA_REVIEW_DATE,
       source: 'La Nación (2024); coordenadas verificadas via GPS',
     },
-    lastUpdated: '2026-10-26',
+    lastUpdated: DATA_REVIEW_DATE,
     sources: [
       { title: 'La Nación — "Subir al cerro Santa María, una tradicional peregrinación de Viernes Santo" (2024)', url: 'https://www.lanacion.com.py/pais/2024/03/29/subir-al-cerro-santa-maria-una-tradicional-y-atractiva-peregrinacion-de-viernes-santo-en-misiones/' },
       { title: 'La Nación — "Subir hasta el Kurusu Cerro en Santa María de Fe" (2017)', url: 'https://www.lanacion.com.py/pais/2017/04/14/subir-hasta-el-kurusu-cerro-en-santa-maria-de-fe-tradicion-del-viernes-santo/' },
@@ -247,12 +250,19 @@ export const places: Place[] = [
     images: ['/images/calle-colonial.jpg'],
     coordinates: { latitude: -26.782243, longitude: -56.946188 },
     coordinatesSource: 'Google Maps (enlace: https://www.google.com/maps/place/Monasterio+Santa+Mar%C3%ADa+de+Fe)',
+    address: {
+      street: 'Centro de Santa María de Fe',
+      city: 'Santa María de Fe',
+      region: 'Misiones',
+      country: 'Paraguay',
+      note: 'La dirección exacta se confirma por el canal de contacto.',
+    },
     verificationStatus: {
       status: 'verified',
-      lastChecked: '2026-10-26',
+      lastChecked: DATA_REVIEW_DATE,
       source: 'Infonegocios (2024) y Google Maps; coordenadas verificadas',
     },
-    lastUpdated: '2026-10-26',
+    lastUpdated: DATA_REVIEW_DATE,
     sources: [
       { title: 'Infonegocios — "Taller del Monasterio, un emprendimiento de monjes" (2024)', url: 'https://infonegocios.com.py/default/desde-santa-maria-de-fe-taller-del-monasterio-un-emprendimiento-de-monjes-que-fabrican-productos-artesanales' },
       { title: 'Google Maps — Monasterio Santa María de Fe', url: 'https://www.google.com/maps/place/Monasterio+Santa+Mar%C3%ADa+de+Fe' },
@@ -284,10 +294,10 @@ export const places: Place[] = [
     },
     verificationStatus: {
       status: 'verified',
-      lastChecked: '2026-10-26',
+      lastChecked: DATA_REVIEW_DATE,
       source: 'santamariadefe.org y ABC Color (2021)',
     },
-    lastUpdated: '2026-10-26',
+    lastUpdated: DATA_REVIEW_DATE,
     sources: [
       { title: 'Santa Maria Education Fund — Visit us (Taller de Hermandad)', url: 'https://santamariadefe.org/get-in-touch/visit-us/' },
       { title: 'santamariadefe.com — Christmas work', url: 'https://www.santamariadefe.com/christmaswork.html' },
@@ -320,10 +330,10 @@ export const places: Place[] = [
     },
     verificationStatus: {
       status: 'pending',
-      lastChecked: '2026-10-26',
+      lastChecked: DATA_REVIEW_DATE,
       source: 'santamariadefe.com y publicación del IPA; datos de horarios sin confirmar',
     },
-    lastUpdated: '2026-10-26',
+    lastUpdated: DATA_REVIEW_DATE,
     sources: [
       { title: 'santamariadefe.com', url: 'https://santamariadefe.com/' },
       { title: 'Instituto Paraguayo de Artesanía (publicación sobre tapices de Santa María)', url: 'https://www.facebook.com/InstitutoParaguayoArtesania/' },
@@ -355,10 +365,10 @@ export const places: Place[] = [
     },
     verificationStatus: {
       status: 'pending',
-      lastChecked: '2026-10-26',
+      lastChecked: DATA_REVIEW_DATE,
       source: 'RFI y Australian National Botanic Gardens; datos de visita sin confirmar',
     },
-    lastUpdated: '2026-10-26',
+    lastUpdated: DATA_REVIEW_DATE,
     sources: [
       { title: 'RFI — "Paraguay rinde homenaje al prolífico botánico francés Aimé Bonpland" (2023)', url: 'https://www.rfi.fr/es/programas/cr%C3%B3nica-cultural/20230623-paraguay-rinde-homenaje-al-prol%C3%ADfico-bot%C3%A1nico-franc%C3%A9s-aim%C3%A9-bonpland' },
       { title: 'Australian National Botanic Gardens — Bonpland, Aimé Jacques Alexandre', url: 'https://www.anbg.gov.au/biography/bonpland-aime-jacques.html' },
@@ -384,12 +394,20 @@ export const places: Place[] = [
       'Granja de la familia Espinoza en la compañía Tava, con la cascada El Chorro y el arroyo antiguo Paso Joha a unos 5 km del pueblo.',
     description:
       'La Granja 5 de Mayo es una granja de la familia Espinoza ubicada en la compañía Tava, a unos 5 kilómetros aproximados del centro urbano de Santa María de Fe. Allí se encuentran la cascada de agua conocida como El Chorro y el arroyo antiguo Paso Joha, un destino habitual de paseo y descanso para las familias marienses.',
+    images: ['/images/camino-entrada.jpg'],
+    address: {
+      street: 'Compañía Tava',
+      city: 'Santa María de Fe',
+      region: 'Misiones',
+      country: 'Paraguay',
+      note: 'El acceso exacto y las condiciones de visita no están documentados en fuentes públicas.',
+    },
     verificationStatus: {
       status: 'pending',
-      lastChecked: '2026-10-26',
+      lastChecked: DATA_REVIEW_DATE,
       source: 'Wikipedia ES (única fuente encontrada); requiere verificación in situ',
     },
-    lastUpdated: '2026-10-26',
+    lastUpdated: DATA_REVIEW_DATE,
     sources: [
       { title: 'Wikipedia ES — Santa María de Fe (Granja 5 de Mayo)', url: 'https://es.wikipedia.org/wiki/Santa_Mar%C3%ADa_de_Fe' },
     ],
@@ -414,14 +432,20 @@ export const places: Place[] = [
     description:
       'El ingenio Hibernia, a la entrada de Santa María de Fe, es la principal empresa agroindustrial del distrito. Fundado en 1988 como destilería de alcohol, hoy elabora azúcar orgánica certificada —claras y oscuras— y melaza, con una producción cercana a las 6.000 toneladas anuales. Procesa caña de plantación propia de alrededor de 1.000 hectáreas y compra caña a productores de Misiones y Guairá. Exporta a Estados Unidos, Europa, China y Corea del Sur; en abril de 2025 realizó su primera exportación de azúcar orgánica con sello nacional paraguayo a Taiwán. Cuenta con alrededor de 25 certificaciones internacionales, entre ellas Fair for Life, y sostiene acciones de impacto social como farmacia y enfermería comunitarias.',
     images: ['/images/camino-entrada.jpg'],
-    coordinates: { latitude: -26.7909359, longitude: -56.9366491 },
-    coordinatesSource: 'OpenStreetMap / Infonegocios',
+    coordinates: { latitude: -26.806789, longitude: -56.948867 },
+    coordinatesSource: 'Google Maps (coordenadas aportadas por la Municipalidad de Santa María de Fe).',
+    address: {
+      street: 'A la entrada de Santa María de Fe',
+      city: 'Santa María de Fe',
+      region: 'Misiones',
+      country: 'Paraguay',
+    },
     verificationStatus: {
       status: 'verified',
-      lastChecked: '2026-10-26',
+      lastChecked: DATA_REVIEW_DATE,
       source: 'Infonegocios/Infoagro y AFD Paraguay',
     },
-    lastUpdated: '2026-10-26',
+    lastUpdated: DATA_REVIEW_DATE,
     sources: [
       { title: 'Infonegocios — "Azúcar paraguaya con sello orgánico nacional llega por primera vez a Taiwán" (2025)', url: 'https://infonegocios.com.py/infoagro/azucar-paraguaya-con-sello-organico-nacional-llega-por-primera-vez-al-mercado-de-taiwan' },
       { title: 'AFD Paraguay — "Hibernia Misiones"', url: 'https://www.afd.gov.py/noticias/hibernia-misiones-194' },
@@ -448,8 +472,14 @@ export const places: Place[] = [
     description:
       'El Polideportivo Municipal es el espacio principal para la práctica deportiva en Santa María de Fe. Cuenta con canchas de fútbol sintéticas, pista de atletismo y áreas para eventos comunitarios. Es el escenario de entrenamientos y competiciones locales, y durante la Semana Santa recibe gran afluencia de público.',
     images: ['/images/commons/acceso-ruta.jpg'],
-    coordinates: { latitude: -26.7850091, longitude: -56.9510031 },
+    coordinates: { latitude: -26.784998, longitude: -56.951046 },
     coordinatesSource: 'Google Maps (enlace: https://www.google.com/maps/place/Polideportivo+Municipal+de+Santa+Maria)',
+    address: {
+      street: 'Centro urbano, a pocos cuadras de la plaza principal',
+      city: 'Santa María de Fe',
+      region: 'Misiones',
+      country: 'Paraguay',
+    },
     verificationStatus: {
       status: 'verified',
       lastChecked: '2026-10-26',
@@ -479,8 +509,14 @@ export const places: Place[] = [
     description:
       'El Balneario Taperã es un espacio de baño y recreación sobre el arroyo Taperã, localizado a las afueras del casco urbano. Es un lugar habitual de paseo y descanso para las familias marienses, especialmente en épocas de calor. El acceso es gratuito y cuenta con áreas de sombra y sectores de picnic.',
     images: ['/images/commons/calle-01.jpg'],
-    coordinates: { latitude: -26.7909657, longitude: -56.9366491 },
+    coordinates: { latitude: -26.791151, longitude: -56.936283 },
     coordinatesSource: 'Google Maps (enlace: https://www.google.com/maps/place/Balneio+taper%C3%A3)',
+    address: {
+      street: 'A las afueras del casco urbano',
+      city: 'Santa María de Fe',
+      region: 'Misiones',
+      country: 'Paraguay',
+    },
     verificationStatus: {
       status: 'verified',
       lastChecked: '2026-10-26',
@@ -510,8 +546,14 @@ export const places: Place[] = [
     description:
       'Frutas del Paraguay es un comercio local que comercializa frutas de la región frescas y de temporada. Ofrece una variedad de frutas nativas y cultivadas, y es un punto de encuentro para los vecinos que buscan productos frescos del campo.',
     images: ['/images/commons/calle-01.jpg'],
-    coordinates: { latitude: -26.7919403, longitude: -56.8992206 },
+    coordinates: { latitude: -26.791929, longitude: -56.896901 },
     coordinatesSource: 'Google Maps (enlace: https://www.google.com/maps/place/Frutas+del+Paraguay)',
+    address: {
+      street: 'En el centro urbano',
+      city: 'Santa María de Fe',
+      region: 'Misiones',
+      country: 'Paraguay',
+    },
     verificationStatus: {
       status: 'verified',
       lastChecked: '2026-10-26',
@@ -531,3 +573,30 @@ export const places: Place[] = [
     openingHoursNote: 'No hay horario oficial publicado. Consultá al comerciante antes de visitar.',
   },
 ]
+
+export const placeFromSlug = (slug: string): Place | undefined =>
+  places.find((p) => p.slug === slug || p.id === slug)
+
+export const categoriesOptions: { key: Category; label: string }[] = [
+  { key: 'todos', label: 'Todos' },
+  { key: 'patrimonio-historico', label: 'Patrimonio histórico' },
+  { key: 'iglesia', label: 'Iglesia' },
+  { key: 'museos', label: 'Museos' },
+  { key: 'naturaleza', label: 'Naturaleza' },
+  { key: 'artesanias', label: 'Artesanías' },
+  { key: 'agroindustria', label: 'Agroindustria' },
+]
+
+export const featuredPlaces: Place[] = places.filter((p) =>
+  [
+    'plaza-mariscal-estigarribia',
+    'iglesia-santa-maria',
+    'museo-diocesano',
+    'kurusu-cerro',
+    'ykua-teja',
+    'ingenio-hibernia',
+    'polideportivo-municipal-santa-maria',
+    'balneario-taperã',
+    'frutas-del-paraguay',
+  ].includes(p.id)
+)
