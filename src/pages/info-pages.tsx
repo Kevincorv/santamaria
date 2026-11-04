@@ -3,9 +3,17 @@ import { Header } from '../components/layout/header'
 import { Footer } from '../components/layout/footer'
 import { Download, Shield, Info, Check, Smartphone, Globe, Share2 } from 'lucide-react'
 import { useNewInstallPrompt } from '../hooks/use-pwa'
+import { useSeo } from '../hooks/use-seo'
 
 export const InstalarPage: React.FC = () => {
   const { promptInstall, canInstall, isStandalone } = useNewInstallPrompt()
+
+  useSeo({
+    title: 'Instalar como aplicación',
+    description:
+      'Instalá Santa María de Fe Digital en la pantalla de inicio de tu teléfono: acceso rápido al catálogo de lugares, mapas y códigos QR, con soporte parcial sin conexión.',
+    path: '/instalar',
+  })
 
   return (
     <div className="min-h-screen bg-[#F7F4ED] text-[#202724] flex flex-col font-sans">
@@ -67,6 +75,12 @@ export const InstalarPage: React.FC = () => {
 }
 
 export const AcercaDePage: React.FC = () => {
+  useSeo({
+    title: 'Acerca del proyecto',
+    description:
+      'Qué es Santa María de Fe Digital: plataforma pública para preservar y difundir el patrimonio histórico, arquitectónico y natural de la antigua reducción jesuítico-guaraní de Santa María de Fe, Misiones.',
+    path: '/acerca-de',
+  })
   return (
     <div className="min-h-screen bg-[#F7F4ED] text-[#202724] flex flex-col font-sans">
       <Header />
@@ -100,6 +114,12 @@ export const AcercaDePage: React.FC = () => {
 }
 
 export const PrivacidadPage: React.FC = () => {
+  useSeo({
+    title: 'Política de privacidad',
+    description:
+      'Política de privacidad de Santa María de Fe Digital: qué datos se usan, cómo se trata la ubicación del visitante y qué servicios externos intervienen.',
+    path: '/privacidad',
+  })
   return (
     <div className="min-h-screen bg-[#F7F4ED] text-[#202724] flex flex-col font-sans">
       <Header />

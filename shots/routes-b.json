@@ -1,0 +1,17 @@
+[
+  { "name": "20-hero-desktop-view", "path": "/", "vp": "desktop", "full": false },
+  { "name": "21-hero-mobile-view", "path": "/", "vp": "mobile", "full": false },
+  { "name": "22-hero-wide-view", "path": "/", "vp": "wide", "full": false },
+  { "name": "23-detalle-lugar-full", "path": "/lugares/museo-diocesano", "vp": "desktop" },
+  { "name": "24-detalle-hospedaje", "path": "/hospedajes/santa-maria-hotel", "vp": "desktop" },
+  { "name": "25-detalle-gastronomia", "path": "/gastronomia/la-familia-resto-bar", "vp": "desktop" },
+  { "name": "26-servicios", "path": "/servicios", "vp": "desktop" },
+  { "name": "27-contacto", "path": "/contacto", "vp": "desktop" },
+  { "name": "28-contacto-mobile", "path": "/contacto", "vp": "mobile" },
+  { "name": "29-mapa-full", "path": "/mapa", "vp": "desktop" },
+  { "name": "30-informacion-util", "path": "/informacion-util", "vp": "desktop" },
+  { "name": "31-escanear", "path": "/escanear", "vp": "desktop" },
+  { "name": "32-notfound", "path": "/no-existe-esta-ruta", "vp": "desktop" },
+  { "name": "33-lugares-mobile-view", "path": "/lugares", "vp": "mobile", "full": false },
+  { "name": "34-detalle-mobile-view", "path": "/lugares/museo-diocesano", "vp": "mobile", "full": false }
+]

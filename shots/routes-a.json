@@ -1,0 +1,17 @@
+[
+  { "name": "01-home-desktop", "path": "/", "vp": "desktop" },
+  { "name": "02-home-mobile", "path": "/", "vp": "mobile" },
+  { "name": "03-home-tablet", "path": "/", "vp": "tablet" },
+  { "name": "04-lugares-desktop", "path": "/lugares", "vp": "desktop" },
+  { "name": "05-lugares-mobile", "path": "/lugares", "vp": "mobile" },
+  { "name": "06-detalle-lugar-desktop", "path": "/lugares/museo-diocesano", "vp": "desktop" },
+  { "name": "07-detalle-lugar-mobile", "path": "/lugares/museo-diocesano", "vp": "mobile" },
+  { "name": "08-mapa-desktop", "path": "/mapa", "vp": "desktop" },
+  { "name": "09-mapa-mobile", "path": "/mapa", "vp": "mobile" },
+  { "name": "10-hospedajes-desktop", "path": "/hospedajes", "vp": "desktop" },
+  { "name": "11-hospedajes-mobile", "path": "/hospedajes", "vp": "mobile" },
+  { "name": "12-gastronomia-desktop", "path": "/gastronomia", "vp": "desktop" },
+  { "name": "13-historia-desktop", "path": "/historia", "vp": "desktop" },
+  { "name": "14-artesania-desktop", "path": "/artesania", "vp": "desktop" },
+  { "name": "15-eventos-desktop", "path": "/eventos", "vp": "desktop" }
+]

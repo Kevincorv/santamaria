@@ -1,0 +1,386 @@
+{
+  "routes": [
+    "/",
+    "/acerca-de",
+    "/artesania",
+    "/contacto",
+    "/escanear",
+    "/eventos",
+    "/gastronomia",
+    "/gastronomia/comidas-santa-maria-hotel",
+    "/gastronomia/delicias-tati",
+    "/gastronomia/dolce-aroma",
+    "/gastronomia/heladeria-sandy",
+    "/gastronomia/la-familia-resto-bar",
+    "/gastronomia/son-delicias",
+    "/historia",
+    "/hospedajes",
+    "/hospedajes/hospedaje-aguara",
+    "/hospedajes/posada-nanderoga",
+    "/hospedajes/posada-tio-lalo",
+    "/hospedajes/santa-maria-hotel",
+    "/idiomas",
+    "/informacion-util",
+    "/instalar",
+    "/itinerarios",
+    "/lugares",
+    "/lugares/balneario-taperã",
+    "/lugares/casa-museo-bonpland",
+    "/lugares/frutas-del-paraguay",
+    "/lugares/granja-5-de-mayo",
+    "/lugares/iglesia-santa-maria",
+    "/lugares/ingenio-hibernia",
+    "/lugares/kurusu-cerro",
+    "/lugares/monasterio-san-jose",
+    "/lugares/museo-diocesano",
+    "/lugares/plaza-mariscal-estigarribia",
+    "/lugares/polideportivo-municipal-santa-maria",
+    "/lugares/taller-hermandad",
+    "/lugares/taller-tapices",
+    "/lugares/ykua-teja",
+    "/mapa",
+    "/privacidad",
+    "/recorridos",
+    "/registro-prestadores",
+    "/servicios"
+  ],
+  "broken": [],
+  "details": [
+    {
+      "route": "/",
+      "pass": true,
+      "len": 4390,
+      "title": "Guía turística y patrimonial · Santa María de Fe Digital"
+    },
+    {
+      "route": "/acerca-de",
+      "pass": true,
+      "len": 1971,
+      "title": "Acerca del proyecto · Santa María de Fe Digital"
+    },
+    {
+      "route": "/artesania",
+      "pass": true,
+      "len": 5700,
+      "title": "Artesanías, productos y experiencias · Santa María de Fe Digital"
+    },
+    {
+      "route": "/contacto",
+      "pass": true,
+      "len": 3118,
+      "title": "Contacto y cómo llegar · Santa María de Fe Digital"
+    },
+    {
+      "route": "/escanear",
+      "pass": true,
+      "len": 2634,
+      "title": "Códigos QR · Santa María de Fe Digital"
+    },
+    {
+      "route": "/eventos",
+      "pass": true,
+      "len": 5048,
+      "title": "Agenda y celebraciones · Santa María de Fe Digital"
+    },
+    {
+      "route": "/gastronomia",
+      "pass": true,
+      "len": 5317,
+      "title": "Gastronomía y sabores · Santa María de Fe Digital"
+    },
+    {
+      "route": "/gastronomia/comidas-santa-maria-hotel",
+      "pass": true,
+      "len": 2500,
+      "title": "Comidas caseras del Santa María Hotel · Santa María de Fe Digital"
+    },
+    {
+      "route": "/gastronomia/delicias-tati",
+      "pass": true,
+      "len": 2927,
+      "title": "Delicias Tati · Santa María de Fe Digital"
+    },
+    {
+      "route": "/gastronomia/dolce-aroma",
+      "pass": true,
+      "len": 2409,
+      "title": "Dolce Aroma · Santa María de Fe Digital"
+    },
+    {
+      "route": "/gastronomia/heladeria-sandy",
+      "pass": true,
+      "len": 2372,
+      "title": "Heladería Sandy · Santa María de Fe Digital"
+    },
+    {
+      "route": "/gastronomia/la-familia-resto-bar",
+      "pass": true,
+      "len": 2446,
+      "title": "La Familia Resto Bar · Santa María de Fe Digital"
+    },
+    {
+      "route": "/gastronomia/son-delicias",
+      "pass": true,
+      "len": 2353,
+      "title": "Son Delicias (tortillas) · Santa María de Fe Digital"
+    },
+    {
+      "route": "/historia",
+      "pass": true,
+      "len": 10114,
+      "title": "Historia y patrimonio · Santa María de Fe Digital"
+    },
+    {
+      "route": "/hospedajes",
+      "pass": true,
+      "len": 3553,
+      "title": "Hoteles y hospedajes · Santa María de Fe Digital"
+    },
+    {
+      "route": "/hospedajes/hospedaje-aguara",
+      "pass": true,
+      "len": 2439,
+      "title": "Hospedaje Aguará · Santa María de Fe Digital"
+    },
+    {
+      "route": "/hospedajes/posada-nanderoga",
+      "pass": true,
+      "len": 2466,
+      "title": "Posada ÑandeRoga · Santa María de Fe Digital"
+    },
+    {
+      "route": "/hospedajes/posada-tio-lalo",
+      "pass": true,
+      "len": 2897,
+      "title": "Posada Tío Lalo · Santa María de Fe Digital"
+    },
+    {
+      "route": "/hospedajes/santa-maria-hotel",
+      "pass": true,
+      "len": 3866,
+      "title": "Santa María Hotel · Santa María de Fe Digital"
+    },
+    {
+      "route": "/idiomas",
+      "pass": true,
+      "len": 2368,
+      "title": "Guía de idiomas · Santa María de Fe Digital"
+    },
+    {
+      "route": "/informacion-util",
+      "pass": true,
+      "len": 3810,
+      "title": "Información útil · Santa María de Fe Digital"
+    },
+    {
+      "route": "/instalar",
+      "pass": true,
+      "len": 1619,
+      "title": "Instalar como aplicación · Santa María de Fe Digital"
+    },
+    {
+      "route": "/itinerarios",
+      "pass": true,
+      "len": 5732,
+      "title": "Itinerarios · Santa María de Fe Digital"
+    },
+    {
+      "route": "/lugares",
+      "pass": true,
+      "len": 4193,
+      "title": "Lugares y atractivos · Santa María de Fe Digital"
+    },
+    {
+      "route": "/lugares/balneario-taperã",
+      "pass": true,
+      "len": 2896,
+      "title": "Balneario Taperã · Santa María de Fe Digital"
+    },
+    {
+      "route": "/lugares/casa-museo-bonpland",
+      "pass": true,
+      "len": 3519,
+      "title": "Casa-museo Aimé Bonpland · Santa María de Fe Digital"
+    },
+    {
+      "route": "/lugares/frutas-del-paraguay",
+      "pass": true,
+      "len": 2754,
+      "title": "Frutas del Paraguay · Santa María de Fe Digital"
+    },
+    {
+      "route": "/lugares/granja-5-de-mayo",
+      "pass": true,
+      "len": 3034,
+      "title": "Granja 5 de Mayo (cascada El Chorro y arroyo Paso Joha) · Santa María de Fe Digital"
+    },
+    {
+      "route": "/lugares/iglesia-santa-maria",
+      "pass": true,
+      "len": 3762,
+      "title": "Iglesia de Santa María de Fe · Santa María de Fe Digital"
+    },
+    {
+      "route": "/lugares/ingenio-hibernia",
+      "pass": true,
+      "len": 3589,
+      "title": "Ingenio Hibernia (azúcar orgánica) · Santa María de Fe Digital"
+    },
+    {
+      "route": "/lugares/kurusu-cerro",
+      "pass": true,
+      "len": 3829,
+      "title": "Kurusu Cerro (Cerro de Santa María) · Santa María de Fe Digital"
+    },
+    {
+      "route": "/lugares/monasterio-san-jose",
+      "pass": true,
+      "len": 3133,
+      "title": "Monasterio San José (comunidad monástica de Santa María de Fe) · Santa María de Fe Digital"
+    },
+    {
+      "route": "/lugares/museo-diocesano",
+      "pass": true,
+      "len": 3662,
+      "title": "Museo Diocesano de Arte Jesuítico Guarani · Santa María de Fe Digital"
+    },
+    {
+      "route": "/lugares/plaza-mariscal-estigarribia",
+      "pass": true,
+      "len": 3616,
+      "title": "Plaza Mariscal Estigarribia y casco histórico · Santa María de Fe Digital"
+    },
+    {
+      "route": "/lugares/polideportivo-municipal-santa-maria",
+      "pass": true,
+      "len": 2971,
+      "title": "Polideportivo Municipal de Santa María · Santa María de Fe Digital"
+    },
+    {
+      "route": "/lugares/taller-hermandad",
+      "pass": true,
+      "len": 3191,
+      "title": "Taller de Hermandad (artesanías y bordados) · Santa María de Fe Digital"
+    },
+    {
+      "route": "/lugares/taller-tapices",
+      "pass": true,
+      "len": 3103,
+      "title": "Taller de tapices y apliqué de Santa María · Santa María de Fe Digital"
+    },
+    {
+      "route": "/lugares/ykua-teja",
+      "pass": true,
+      "len": 3506,
+      "title": "Ykua Teja · Santa María de Fe Digital"
+    },
+    {
+      "route": "/mapa",
+      "pass": true,
+      "len": 2262,
+      "title": "Mapa interactivo · Santa María de Fe Digital"
+    },
+    {
+      "route": "/privacidad",
+      "pass": true,
+      "len": 1700,
+      "title": "Política de privacidad · Santa María de Fe Digital"
+    },
+    {
+      "route": "/recorridos",
+      "pass": true,
+      "len": 5060,
+      "title": "Recorridos autoguiados · Santa María de Fe Digital"
+    },
+    {
+      "route": "/registro-prestadores",
+      "pass": true,
+      "len": 2464,
+      "title": "Registro de prestadores · Santa María de Fe Digital"
+    },
+    {
+      "route": "/servicios",
+      "pass": true,
+      "len": 2757,
+      "title": "Servicios turísticos · Santa María de Fe Digital"
+    }
+  ],
+  "titles": [
+    [
+      "/",
+      "Guía turística y patrimonial · Santa María de Fe Digital"
+    ],
+    [
+      "/lugares",
+      "Lugares y atractivos · Santa María de Fe Digital"
+    ],
+    [
+      "/historia",
+      "Historia y patrimonio · Santa María de Fe Digital"
+    ],
+    [
+      "/mapa",
+      "Mapa interactivo · Santa María de Fe Digital"
+    ],
+    [
+      "/servicios",
+      "Servicios turísticos · Santa María de Fe Digital"
+    ],
+    [
+      "/contacto",
+      "Contacto y cómo llegar · Santa María de Fe Digital"
+    ],
+    [
+      "/hospedajes",
+      "Hoteles y hospedajes · Santa María de Fe Digital"
+    ],
+    [
+      "/gastronomia",
+      "Gastronomía y sabores · Santa María de Fe Digital"
+    ],
+    [
+      "/artesania",
+      "Artesanías, productos y experiencias · Santa María de Fe Digital"
+    ],
+    [
+      "/eventos",
+      "Agenda y celebraciones · Santa María de Fe Digital"
+    ],
+    [
+      "/recorridos",
+      "Recorridos autoguiados · Santa María de Fe Digital"
+    ],
+    [
+      "/itinerarios",
+      "Itinerarios · Santa María de Fe Digital"
+    ],
+    [
+      "/informacion-util",
+      "Información útil · Santa María de Fe Digital"
+    ],
+    [
+      "/idiomas",
+      "Guía de idiomas · Santa María de Fe Digital"
+    ],
+    [
+      "/registro-prestadores",
+      "Registro de prestadores · Santa María de Fe Digital"
+    ],
+    [
+      "/escanear",
+      "Códigos QR · Santa María de Fe Digital"
+    ],
+    [
+      "/instalar",
+      "Instalar como aplicación · Santa María de Fe Digital"
+    ],
+    [
+      "/acerca-de",
+      "Acerca del proyecto · Santa María de Fe Digital"
+    ],
+    [
+      "/privacidad",
+      "Política de privacidad · Santa María de Fe Digital"
+    ]
+  ]
+}

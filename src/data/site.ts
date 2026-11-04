@@ -1,11 +1,14 @@
 /**
  * Configuración central del sitio.
  *
- * IMPORTANTE para producción: definir VITE_SITE_URL en el entorno de build
- * (por ejemplo VITE_SITE_URL=https://tudominio.com) para que los códigos QR,
- * las etiquetas canónicas y el sitemap apunten a la URL pública definitiva.
- * Sin esa variable, en producción se usa el origen donde se sirva la app.
+ * URL canónica: se usa VITE_SITE_URL si está definida en el entorno de build y,
+ * en caso contrario, el dominio de producción publicado. Así los códigos QR, las
+ * etiquetas canónicas y el sitemap apuntan siempre a una dirección pública real
+ * y nunca a localhost.
  */
+/** Dominio publicado del portal. Actualizar si el sitio cambia de dominio. */
+const PRODUCTION_ORIGIN = 'https://santamaria-azure.vercel.app'
+
 const envUrl = import.meta.env.VITE_SITE_URL as string | undefined
 
 const runtimeOrigin = (): string => {
@@ -13,13 +16,10 @@ const runtimeOrigin = (): string => {
   return ''
 }
 
-export const SITE_URL: string = (envUrl || (import.meta.env.PROD ? runtimeOrigin() : '')).replace(
-  /\/$/,
-  ''
-)
+export const SITE_URL: string = (envUrl || PRODUCTION_ORIGIN).replace(/\/$/, '')
 
 /** true cuando aún no se definió una URL canónica de producción. */
-export const IS_CANONICAL_URL_MISSING = !envUrl && !import.meta.env.PROD
+export const IS_CANONICAL_URL_MISSING = !envUrl
 
 export const SITE_NAME = 'Santa María de Fe Digital'
 export const SITE_TAGLINE = 'Guía turística y patrimonial de Santa María de Fe, Misiones, Paraguay'

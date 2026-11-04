@@ -1,14 +1,19 @@
-import React, { useState, useMemo, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useMemo, useEffect } from 'react'
+import { Link, useSearchParams } from 'react-router-dom'
 import { Header } from '../components/layout/header'
 import { Footer } from '../components/layout/footer'
 import { SmartImage } from '../components/ui/smart-image'
-import { places } from '../data/places'
-import { accommodations } from '../data/accommodations'
-import { restaurants } from '../data/restaurants'
 import { useSeo } from '../hooks/use-seo'
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
-import L from 'leaflet'
+import {
+  categoryConfig,
+  createPinIcon,
+  userLocationIcon,
+  CITY_CENTER,
+  type MapPoint,
+} from '../components/map/map-style'
+import { buildMapPoints, buildPendingLocations } from '../components/map/map-points'
+import { places } from '../data/places'
 import {
   Navigation,
   MapPin,
@@ -23,52 +28,21 @@ import {
   Utensils,
   Scissors,
   LayoutGrid,
+  Leaf,
+  Store,
 } from 'lucide-react'
 
-type MapCategory = 'todos' | 'patrimonio-historico' | 'iglesia' | 'museos' | 'naturaleza' | 'alojamiento' | 'gastronomia'
-
-const categoryConfig: Record<string, { color: string; label: string }> = {
-  'patrimonio-historico': { color: '#102D2B', label: 'Patrimonio' },
-  iglesia: { color: '#28685A', label: 'Iglesia' },
-  museos: { color: '#C25E00', label: 'Museo' },
-  naturaleza: { color: '#166534', label: 'Naturaleza' },
-  alojamiento: { color: '#1E40AF', label: 'Alojamiento' },
-  gastronomia: { color: '#B45309', label: 'Gastronomía' },
-  artesanias: { color: '#7C3AED', label: 'Artesanía' },
-}
-
-const createPinIcon = (category: string, isSelected: boolean) => {
-  const config = categoryConfig[category] || { color: '#102D2B' }
-  const size = isSelected ? 40 : 30
-  return L.divIcon({
-    className: 'custom-map-marker',
-    html: `<div style="
-      width:${size}px;height:${size}px;
-      background:${config.color};
-      border:3px solid #fff;border-radius:50% 50% 50% 0;
-      transform:rotate(-45deg);
-      box-shadow:0 3px 8px rgba(0,0,0,.35);
-      display:flex;align-items:center;justify-content:center;">
-      <span style="transform:rotate(45deg);color:#fff;font-weight:700;font-size:11px;">●</span>
-    </div>`,
-    iconSize: [size, size],
-    iconAnchor: [size / 2, size],
-    popupAnchor: [0, -size + 6],
-  })
-}
-
-interface MapPoint {
-  id: string
-  name: string
-  category: string
-  kindLabel: string
-  latitude: number
-  longitude: number
-  description: string
-  href: string
-  image?: string
-  linkLabel: string
-}
+type MapCategory =
+  | 'todos'
+  | 'patrimonio-historico'
+  | 'iglesia'
+  | 'museos'
+  | 'naturaleza'
+  | 'alojamiento'
+  | 'gastronomia'
+  | 'artesanias'
+  | 'agroindustria'
+  | 'servicios'
 
 const FlyTo: React.FC<{ lat: number; lon: number; trigger: number }> = ({ lat, lon, trigger }) => {
   const map = useMap()
@@ -85,6 +59,7 @@ export const MapPage: React.FC = () => {
   const [userPosition, setUserPosition] = useState<[number, number] | null>(null)
   const [flyTrigger, setFlyTrigger] = useState(0)
   const [geoMessage, setGeoMessage] = useState('')
+  const [searchParams] = useSearchParams()
 
   useSeo({
     title: 'Mapa interactivo',
@@ -93,54 +68,20 @@ export const MapPage: React.FC = () => {
     path: '/mapa',
   })
 
-  const allPoints: MapPoint[] = useMemo(() => {
-    const fromPlaces: MapPoint[] = places
-      .filter((p) => p.coordinates)
-      .map((p) => ({
-        id: p.id,
-        name: p.name,
-        category: p.category,
-        kindLabel: p.categoryLabel || 'Lugar',
-        latitude: p.coordinates!.latitude,
-        longitude: p.coordinates!.longitude,
-        description: p.shortDescription,
-        href: `/lugares/${p.slug}`,
-        image: p.images[0],
-        linkLabel: 'Ver ficha',
-      }))
+  const allPoints: MapPoint[] = useMemo(() => buildMapPoints(), [])
 
-    const fromHotels: MapPoint[] = accommodations
-      .filter((a) => a.coordinates)
-      .map((a) => ({
-        id: a.id,
-        name: a.name,
-        category: 'alojamiento',
-        kindLabel: a.categoryLabel || 'Alojamiento',
-        latitude: a.coordinates!.latitude,
-        longitude: a.coordinates!.longitude,
-        description: a.shortDescription,
-        href: '/hospedajes',
-        image: a.images[0],
-        linkLabel: 'Ver alojamientos',
-      }))
-
-    const fromFood: MapPoint[] = restaurants
-      .filter((r) => r.coordinates)
-      .map((r) => ({
-        id: r.id,
-        name: r.name,
-        category: 'gastronomia',
-        kindLabel: r.kind,
-        latitude: r.coordinates!.latitude,
-        longitude: r.coordinates!.longitude,
-        description: r.shortDescription,
-        href: '/gastronomia',
-        image: r.images[0],
-        linkLabel: 'Ver gastronomía',
-      }))
-
-    return [...fromPlaces, ...fromHotels, ...fromFood]
-  }, [])
+  /** Selección inicial a partir de ?lugar=<slug> (p. ej. desde una ficha). */
+  useEffect(() => {
+    const slug = searchParams.get('lugar')
+    if (!slug) return
+    const place = places.find((p) => p.slug === slug || p.id === slug)
+    if (!place?.coordinates) return
+    const point = allPoints.find((p) => p.id === place.id)
+    if (point) {
+      setSelectedPoint(point)
+      setFlyTrigger((t) => t + 1)
+    }
+  }, [searchParams, allPoints])
 
   const filteredPoints = useMemo(
     () => (selectedCategory === 'todos' ? allPoints : allPoints.filter((p) => p.category === selectedCategory)),
@@ -148,12 +89,7 @@ export const MapPage: React.FC = () => {
   )
 
   /** Sitios documentados sin coordenadas verificadas: NO se colocan en el mapa. */
-  const pendingLocations = useMemo(() => {
-    const pendingPlaces = places.filter((p) => !p.coordinates).map((p) => ({ name: p.name, note: 'Coordenadas pendientes de verificar', href: `/lugares/${p.slug}` }))
-    const pendingHotels = accommodations.filter((a) => !a.coordinates).map((a) => ({ name: a.name, note: 'Dirección exacta sin verificar', href: '/hospedajes' }))
-    const pendingFood = restaurants.filter((r) => !r.coordinates).map((r) => ({ name: r.name, note: 'Ubicación sin verificar', href: '/gastronomia' }))
-    return [...pendingPlaces, ...pendingHotels, ...pendingFood]
-  }, [])
+  const pendingLocations = useMemo(() => buildPendingLocations(), [])
 
   const requestLocation = () => {
     if (!navigator.geolocation) {
@@ -184,13 +120,6 @@ export const MapPage: React.FC = () => {
     )
   }
 
-  const userIcon = L.divIcon({
-    className: 'custom-map-marker',
-    html: `<div style="width:18px;height:18px;background:#2563EB;border:3px solid #fff;border-radius:50%;box-shadow:0 0 0 6px rgba(37,99,235,.25);"></div>`,
-    iconSize: [18, 18],
-    iconAnchor: [9, 9],
-  })
-
   const filterButtons: { key: MapCategory; label: string; icon: React.ElementType }[] = [
     { key: 'todos', label: 'Todos', icon: LayoutGrid },
     { key: 'patrimonio-historico', label: 'Patrimonio', icon: Landmark },
@@ -199,6 +128,9 @@ export const MapPage: React.FC = () => {
     { key: 'naturaleza', label: 'Naturaleza', icon: TreePine },
     { key: 'alojamiento', label: 'Hoteles', icon: Bed },
     { key: 'gastronomia', label: 'Gastronomía', icon: Utensils },
+    { key: 'artesanias', label: 'Artesanías', icon: Scissors },
+    { key: 'agroindustria', label: 'Agroindustria', icon: Leaf },
+    { key: 'servicios', label: 'Servicios', icon: Store },
   ]
 
   return (
@@ -301,7 +233,7 @@ export const MapPage: React.FC = () => {
             <div className="bg-white rounded-2xl border border-[#E5E3DC] overflow-hidden shadow-sm">
               <div className="h-[420px] sm:h-[520px] w-full">
                 <MapContainer
-                  center={[-26.7831, -56.9441]}
+                  center={CITY_CENTER}
                   zoom={15}
                   scrollWheelZoom
                   className="w-full h-full"
@@ -313,7 +245,7 @@ export const MapPage: React.FC = () => {
                   />
                   {userPosition && (
                     <>
-                      <Marker position={userPosition} icon={userIcon}>
+                      <Marker position={userPosition} icon={userLocationIcon}>
                         <Popup>Tu ubicación actual</Popup>
                       </Marker>
                       {selectedPoint && (

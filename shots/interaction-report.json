@@ -1,0 +1,157 @@
+[
+  {
+    "name": "Buscador portada navega a /lugares?q=museo",
+    "pass": true,
+    "detail": "https://santamaria-azure.vercel.app/lugares?q=museo"
+  },
+  {
+    "name": "Resultados de búsqueda visibles",
+    "pass": true,
+    "detail": "texto contiene \"museo\""
+  },
+  {
+    "name": "Filtro por categoría reduce resultados",
+    "pass": true,
+    "detail": "todos=14 filtrado=4"
+  },
+  {
+    "name": "Filtro \"Todos\" restaura el catálogo",
+    "pass": true,
+    "detail": "restaurado=14 inicial=14"
+  },
+  {
+    "name": "Estado sin resultados mostrado",
+    "pass": true,
+    "detail": "Saltar al contenido principal Santa María de Fe MISIONES · PARAGUAY Inicio Lugares Historia Mapa Servicios Contacto Esca"
+  },
+  {
+    "name": "QR renderizado en la ficha",
+    "pass": true,
+    "detail": "33 svg"
+  },
+  {
+    "name": "Etiqueta canónica con dominio de producción",
+    "pass": true,
+    "detail": "https://santamaria-azure.vercel.app/lugares/iglesia-santa-maria"
+  },
+  {
+    "name": "og:url con dominio de producción",
+    "pass": true,
+    "detail": "https://santamaria-azure.vercel.app/lugares/iglesia-santa-maria"
+  },
+  {
+    "name": "JSON-LD presente y con URL real",
+    "pass": true,
+    "detail": "675 chars"
+  },
+  {
+    "name": "Sin referencias a localhost",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Panel de QR abre con descarga PNG/SVG",
+    "pass": true,
+    "detail": "Saltar al contenido principal Santa María de Fe MISIONES · PARAGUAY Inicio Lugares Historia Mapa Servicios Contacto Escanear QR Volver al catálogo PAT"
+  },
+  {
+    "name": "Panel de QR muestra la URL real",
+    "pass": true,
+    "detail": "https://santamaria-azure.vercel.app/lugares/iglesia-santa-maria"
+  },
+  {
+    "name": "QR codifica la URL pública real",
+    "pass": true,
+    "detail": "https://santamaria-azure.vercel.app/lugares/iglesia-santa-maria"
+  },
+  {
+    "name": "QR apunta a la ruta de la ficha",
+    "pass": true,
+    "detail": "https://santamaria-azure.vercel.app/lugares/iglesia-santa-maria"
+  },
+  {
+    "name": "QR sin localhost",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Descarga PNG disponible",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Descarga SVG disponible",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Vista imprimible disponible",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Filtro de mapa cambia los marcadores",
+    "pass": true,
+    "detail": "todos=16 hoteles=2"
+  },
+  {
+    "name": "Botón de ubicación presente (requiere acción del usuario)",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Primer tabulador = skip link accesible",
+    "pass": true,
+    "detail": "Saltar al contenido principal"
+  },
+  {
+    "name": "Nav principal completa (6 enlaces)",
+    "pass": true,
+    "detail": "todas presentes"
+  },
+  {
+    "name": "Sin scroll horizontal @ 320px",
+    "pass": true,
+    "detail": "scrollW=320 winW=320"
+  },
+  {
+    "name": "Sin scroll horizontal @ 360px",
+    "pass": true,
+    "detail": "scrollW=360 winW=360"
+  },
+  {
+    "name": "Sin scroll horizontal @ 390px",
+    "pass": true,
+    "detail": "scrollW=390 winW=390"
+  },
+  {
+    "name": "Sin scroll horizontal @ 414px",
+    "pass": true,
+    "detail": "scrollW=414 winW=414"
+  },
+  {
+    "name": "Sin scroll horizontal @ 768px",
+    "pass": true,
+    "detail": "scrollW=768 winW=768"
+  },
+  {
+    "name": "Sin scroll horizontal @ 1024px",
+    "pass": true,
+    "detail": "scrollW=1024 winW=1024"
+  },
+  {
+    "name": "Sin scroll horizontal @ 1440px",
+    "pass": true,
+    "detail": "scrollW=1440 winW=1440"
+  },
+  {
+    "name": "Sin scroll horizontal @ 1920px",
+    "pass": true,
+    "detail": "scrollW=1920 winW=1920"
+  },
+  {
+    "name": "Sin errores de consola",
+    "pass": true,
+    "detail": ""
+  }
+]

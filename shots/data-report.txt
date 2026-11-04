@@ -1,0 +1,56 @@
+=== PLACES: 14 ===
+[patrimonio-historico] plaza-mariscal-estigarribia | imgs=7 | -26.7830965 | phone=n | hours=n | web=n | Plaza Mariscal Estigarribia y casco histórico
+[iglesia] iglesia-santa-maria | imgs=3 | -26.7825265 | phone=n | hours=Y | web=n | Iglesia de Santa María de Fe
+[museos] museo-diocesano | imgs=8 | -26.7822344 | phone=Y | hours=Y | web=n | Museo Diocesano de Arte Jesuítico Guarani
+[patrimonio-historico] ykua-teja | imgs=2 | -26.784281 | phone=n | hours=n | web=n | Ykua Teja
+[naturaleza] kurusu-cerro | imgs=2 | -26.790877 | phone=n | hours=Y | web=n | Kurusu Cerro (Cerro de Santa María)
+[patrimonio-historico] monasterio-san-jose | imgs=1 | -26.782243 | phone=Y | hours=n | web=n | Monasterio San José (comunidad monástica de Santa María de Fe)
+[artesanias] taller-hermandad | imgs=1 | NONE | phone=n | hours=n | web=n | Taller de Hermandad (artesanías y bordados)
+[artesanias] taller-tapices | imgs=1 | NONE | phone=n | hours=n | web=n | Taller de tapices y apliqué de Santa María
+[patrimonio-historico] casa-museo-bonpland | imgs=1 | NONE | phone=n | hours=Y | web=n | Casa-museo Aimé Bonpland
+[naturaleza] granja-5-de-mayo | imgs=1 | NONE | phone=n | hours=Y | web=n | Granja 5 de Mayo (cascada El Chorro y arroyo Paso Joha)
+[agroindustria] ingenio-hibernia | imgs=1 | -26.806789 | phone=n | hours=Y | web=n | Ingenio Hibernia (azúcar orgánica)
+[naturaleza] polideportivo-municipal-santa-maria | imgs=1 | -26.784998 | phone=n | hours=Y | web=n | Polideportivo Municipal de Santa María
+[naturaleza] balneario-taperã | imgs=1 | -26.791151 | phone=n | hours=Y | web=n | Balneario Taperã
+[servicios] frutas-del-paraguay | imgs=1 | -26.791929 | phone=n | hours=Y | web=n | Frutas del Paraguay
+
+=== ACCOMMODATIONS: 4 ===
+  santa-maria-hotel | imgs=2 | coords=N | phone=Y | hours=Y | web=Y | Santa María Hotel
+  hospedaje-aguara | imgs=1 | coords=Y | phone=Y | hours=n | web=Y | Hospedaje Aguará
+  posada-tio-lalo | imgs=1 | coords=Y | phone=Y | hours=n | web=Y | Posada Tío Lalo
+  posada-nanderoga | imgs=1 | coords=N | phone=n | hours=n | web=Y | Posada ÑandeRoga
+
+=== RESTAURANTS: 6 ===
+  delicias-tati | imgs=1 | coords=Y | phone=n | hours=Y | web=Y | Delicias Tati
+  la-familia-resto-bar | imgs=1 | coords=Y | phone=n | hours=Y | web=Y | La Familia Resto Bar
+  dolce-aroma | imgs=1 | coords=Y | phone=n | hours=Y | web=Y | Dolce Aroma
+  heladeria-sandy | imgs=1 | coords=Y | phone=n | hours=Y | web=Y | Heladería Sandy
+  comidas-santa-maria-hotel | imgs=1 | coords=N | phone=Y | hours=Y | web=Y | Comidas caseras del Santa María Hotel
+  son-delicias | imgs=1 | coords=N | phone=Y | hours=Y | web=Y | Son Delicias (tortillas)
+
+=== EVENTS: 4 ===
+  fiesta-patronal-8-septiembre | imgs=0 | coords=Y | phone=n | hours=Y | web=Y | 
+  peregrinacion-viernes-santo | imgs=0 | coords=N | phone=n | hours=Y | web=Y | 
+  semana-santa | imgs=0 | coords=N | phone=n | hours=Y | web=Y | 
+  aniversario-fundacion | imgs=0 | coords=N | phone=n | hours=n | web=Y | 
+
+=== TOURS: 4 ===
+  circuito-historico-jesuitico | imgs=0 | coords=N | phone=n | hours=n | web=n | 
+  circuito-espiritualidad-artesania | imgs=0 | coords=N | phone=n | hours=n | web=n | 
+  circuito-naturaleza | imgs=0 | coords=N | phone=n | hours=n | web=n | 
+  circuito-bonpland | imgs=0 | coords=N | phone=n | hours=n | web=n | 
+
+=== CRAFTS: 13 ===
+  taller-hermandad | imgs=0 | coords=N | phone=n | hours=n | web=Y | Taller de Hermandad — bordados y apliqué
+  tapices-santa-maria | imgs=0 | coords=N | phone=n | hours=n | web=Y | Tapices de Santa María
+  taller-monasterio | imgs=0 | coords=N | phone=Y | hours=n | web=Y | Taller del Monasterio — dulces y mermeladas a leña
+  azuca-hibernia | imgs=0 | coords=N | phone=n | hours=n | web=Y | Azúcar orgánica Hibernia
+  visita-museo-jesuitico | imgs=0 | coords=N | phone=Y | hours=n | web=Y | Visita al museo de arte jesuítico guaraní
+  peregrinacion-kurusu | imgs=0 | coords=N | phone=n | hours=n | web=Y | Ascenso al Kurusu Cerro
+  talleres-artesanales | imgs=0 | coords=N | phone=Y | hours=n | web=Y | Talleres artesanales de la comunidad
+  monos-caraya | imgs=0 | coords=N | phone=n | hours=n | web=Y | Monos carayás de la plaza
+   | imgs=0 | coords=N | phone=n | hours=n | web=n | Azúcar orgánica y melaza
+   | imgs=0 | coords=N | phone=n | hours=n | web=n | Mermeladas y dulces a leña
+   | imgs=0 | coords=N | phone=n | hours=n | web=n | Tortillas y comida casera
+   | imgs=0 | coords=N | phone=n | hours=n | web=n | Helados artesanales
+   | imgs=0 | coords=N | phone=n | hours=n | web=n | Dulces, licores y hierbas

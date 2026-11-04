@@ -39,3 +39,11 @@ archivos-no-publicados/
 
 .vercel
 .env*
+
+# Salida de las herramientas de verificación (screenshots)
+shots/*.png
+shots/*/
+
+# Logs locales
+*.log
+

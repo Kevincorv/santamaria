@@ -1,0 +1,72 @@
+[
+  {
+    "name": "GET /api/health responde",
+    "pass": true,
+    "detail": "status=200 {\"ok\":true,\"service\":\"santamaria-admin-api\",\"version\":\"1.0.0\",\"driver\":\"sqlite\",\"users\":1}"
+  },
+  {
+    "name": "Motor de datos reportado",
+    "pass": true,
+    "detail": "{\"ok\":true,\"service\":\"santamaria-admin-api\",\"version\":\"1.0.0\",\"driver\":\"sqlite\",\"users\":1}"
+  },
+  {
+    "name": "GET /api/content/:type sin token -> 401",
+    "pass": true,
+    "detail": "status=401"
+  },
+  {
+    "name": "POST /api/auth/login",
+    "pass": true,
+    "detail": "status=200 token=OK {\"ok\":true,\"token\":\"7d9ae48643015fc6a60a461fad96cf4f0a7cc6114a02ea20e861c27fe37c632c\",\"username\":\"admin\",\"expiresAt\":\"20"
+  },
+  {
+    "name": "GET /api/content/places (lectura)",
+    "pass": true,
+    "detail": "status=200 items=0"
+  },
+  {
+    "name": "POST /api/content/places (creación)",
+    "pass": true,
+    "detail": "status=200 {\"ok\":true,\"id\":\"__smf_test_1793760270969__\",\"type\":\"places\"}"
+  },
+  {
+    "name": "El registro creado se puede leer",
+    "pass": true,
+    "detail": "encontrado: REGISTRO DE PRUEBA - ELIMINAR"
+  },
+  {
+    "name": "POST /api/content/places (edición)",
+    "pass": true,
+    "detail": "status=200"
+  },
+  {
+    "name": "La edición persistió",
+    "pass": true,
+    "detail": "name=REGISTRO DE PRUEBA (editado)"
+  },
+  {
+    "name": "POST /api/content/places/delete (baja)",
+    "pass": true,
+    "detail": "status=200 {\"ok\":true,\"deleted\":\"__smf_test_1793760270969__\",\"by\":\"admin\"}"
+  },
+  {
+    "name": "El registro fue eliminado (sin residuos)",
+    "pass": true,
+    "detail": "confirmado"
+  },
+  {
+    "name": "GET /api/export (exportación)",
+    "pass": true,
+    "detail": "status=200"
+  },
+  {
+    "name": "POST /api/auth/logout",
+    "pass": true,
+    "detail": "status=200"
+  },
+  {
+    "name": "La sesión deja de ser válida tras logout",
+    "pass": true,
+    "detail": "status=401"
+  }
+]

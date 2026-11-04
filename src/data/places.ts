@@ -165,7 +165,7 @@ export const places: Place[] = [
       'Ykua Teja es un manantial de agua de origen jesuítico. El nombre combina ykua (naciente o agua que brota) y teja (la cubierta de tejas que protegía la fuente). Fue la primera fuente de la antigua reducción y, con el tiempo, funcionó como lavandería comunitaria. El agua sigue brotando: ante los cortes del servicio, los vecinos acuden todavía al ykua. En julio de 2021 la Municipalidad realizó obras de restauración del sitio, que hoy funciona como plaza con áreas verdes.',
     history:
       'La fuente formaba parte del sistema hidráulico de la reducción jesuítico-guaraní, junto con el acopio y distribución de agua entre los pobladores. Su uso comunitario se mantuvo durante generaciones, lo que la convierte en un testimonio vivo de la vida cotidiana de la misión.',
-    images: ['/images/calle-colonial.jpg', '/images/calle-01.jpg'],
+    images: ['/images/calle-colonial.jpg', '/images/commons/calle-01.jpg'],
     coordinates: { latitude: -26.784281, longitude: -56.935333 },
     coordinatesSource: 'Google Maps (coordenadas aportadas por la Municipalidad de Santa María de Fe).',
     address: {
