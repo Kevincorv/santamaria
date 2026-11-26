@@ -1,0 +1,134 @@
+﻿[
+  {
+    "archivo": "aguarahotelportada.jpeg",
+    "base": "aguarahotelportada",
+    "ext": ".jpeg",
+    "kb": 137,
+    "ancho": 1170,
+    "alto": 703,
+    "ratio": 1.66,
+    "portada": true
+  },
+  {
+    "archivo": "aguaraimagenes.jpeg",
+    "base": "aguaraimagenes",
+    "ext": ".jpeg",
+    "kb": 128,
+    "ancho": 821,
+    "alto": 1020,
+    "ratio": 0.8,
+    "portada": false
+  },
+  {
+    "archivo": "cerrosantamaria.png",
+    "base": "cerrosantamaria",
+    "ext": ".png",
+    "kb": 379,
+    "ancho": 407,
+    "alto": 414,
+    "ratio": 0.98,
+    "portada": false
+  },
+  {
+    "archivo": "deliciastati.png",
+    "base": "deliciastati",
+    "ext": ".png",
+    "kb": 1555,
+    "ancho": 1167,
+    "alto": 766,
+    "ratio": 1.52,
+    "portada": false
+  },
+  {
+    "archivo": "habitaciones aguara2.jpeg",
+    "base": "habitaciones aguara2",
+    "ext": ".jpeg",
+    "kb": 123,
+    "ancho": 763,
+    "alto": 1020,
+    "ratio": 0.75,
+    "portada": false
+  },
+  {
+    "archivo": "habitaciones de aguara para muuestra.jpeg",
+    "base": "habitaciones de aguara para muuestra",
+    "ext": ".jpeg",
+    "kb": 201,
+    "ancho": 1360,
+    "alto": 1020,
+    "ratio": 1.33,
+    "portada": false
+  },
+  {
+    "archivo": "hospedajelaloportada.jpeg",
+    "base": "hospedajelaloportada",
+    "ext": ".jpeg",
+    "kb": 231,
+    "ancho": 1600,
+    "alto": 1066,
+    "ratio": 1.5,
+    "portada": true
+  },
+  {
+    "archivo": "Hostal san joseportada.jpeg",
+    "base": "Hostal san joseportada",
+    "ext": ".jpeg",
+    "kb": 448,
+    "ancho": 1600,
+    "alto": 1066,
+    "ratio": 1.5,
+    "portada": true
+  },
+  {
+    "archivo": "tiolalo hospedaje.jpeg",
+    "base": "tiolalo hospedaje",
+    "ext": ".jpeg",
+    "kb": 416,
+    "ancho": 1600,
+    "alto": 1600,
+    "ratio": 1,
+    "portada": false
+  },
+  {
+    "archivo": "Tiolalo hospedaje2.jpeg",
+    "base": "Tiolalo hospedaje2",
+    "ext": ".jpeg",
+    "kb": 159,
+    "ancho": 853,
+    "alto": 1280,
+    "ratio": 0.67,
+    "portada": false
+  },
+  {
+    "archivo": "tiolalomuestra.jpeg",
+    "base": "tiolalomuestra",
+    "ext": ".jpeg",
+    "kb": 387,
+    "ancho": 1600,
+    "alto": 1600,
+    "ratio": 1,
+    "portada": false
+  },
+  {
+    "archivo": "ykuateja.jpg",
+    "base": "ykuateja",
+    "ext": ".jpg",
+    "kb": 278,
+    "ancho": 765,
+    "alto": 872,
+    "ratio": 0.88,
+    "portada": false
+  },
+  {
+    "archivo": "├▒anderogaportada.png",
+    "base": "├▒anderogaportada",
+    "ext": ".png",
+    "kb": 628,
+    "ancho": 529,
+    "alto": 517,
+    "ratio": 1.02,
+    "portada": true
+  }
+]
+
+TOTALES: 13 | portadas: 4

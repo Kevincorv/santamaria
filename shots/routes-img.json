@@ -1,0 +1,12 @@
+[
+  { "name": "img-hospedajes", "path": "/hospedajes", "vp": "desktop", "wait": 2500 },
+  { "name": "img-aguara", "path": "/hospedajes/hospedaje-aguara", "vp": "desktop", "wait": 2500 },
+  { "name": "img-tiolalo", "path": "/hospedajes/posada-tio-lalo", "vp": "desktop", "wait": 2500 },
+  { "name": "img-nanderoga", "path": "/hospedajes/posada-nanderoga", "vp": "desktop", "wait": 2500 },
+  { "name": "img-hostalsanjose", "path": "/hospedajes/hostal-san-jose", "vp": "desktop", "wait": 2500 },
+  { "name": "img-ykuateja", "path": "/lugares/ykua-teja", "vp": "desktop", "wait": 2500 },
+  { "name": "img-kurusucerro", "path": "/lugares/kurusu-cerro", "vp": "desktop", "wait": 2500 },
+  { "name": "img-deliciastati", "path": "/gastronomia/delicias-tati", "vp": "desktop", "wait": 2500 },
+  { "name": "img-hospedajes-mobile", "path": "/hospedajes", "vp": "mobile", "wait": 2500 },
+  { "name": "img-ykuateja-mobile", "path": "/lugares/ykua-teja", "vp": "mobile", "wait": 2500 }
+]

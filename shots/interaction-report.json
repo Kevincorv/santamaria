@@ -2,7 +2,7 @@
   {
     "name": "Buscador portada navega a /lugares?q=museo",
     "pass": true,
-    "detail": "https://santamaria-azure.vercel.app/lugares?q=museo"
+    "detail": "http://127.0.0.1:4173/lugares?q=museo"
   },
   {
     "name": "Resultados de búsqueda visibles",

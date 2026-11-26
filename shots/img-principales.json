@@ -1,0 +1,261 @@
+[
+  {
+    "archivo": "src/data/accommodations.ts",
+    "id": "santa-maria-hotel",
+    "cantidad": 2,
+    "principal": "/images/commons/casa-indios-hotel.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/accommodations.ts",
+    "id": "hospedaje-aguara",
+    "cantidad": 4,
+    "principal": "/images/lugares/aguarahotelportada.jpeg",
+    "esDeLugares": true
+  },
+  {
+    "archivo": "src/data/accommodations.ts",
+    "id": "posada-tio-lalo",
+    "cantidad": 4,
+    "principal": "/images/lugares/hospedajelaloportada.jpeg",
+    "esDeLugares": true
+  },
+  {
+    "archivo": "src/data/accommodations.ts",
+    "id": "posada-nanderoga",
+    "cantidad": 1,
+    "principal": "/images/lugares/ñanderogaportada.png",
+    "esDeLugares": true
+  },
+  {
+    "archivo": "src/data/accommodations.ts",
+    "id": "hostal-san-jose",
+    "cantidad": 1,
+    "principal": "/images/lugares/Hostal san joseportada.jpeg",
+    "esDeLugares": true
+  },
+  {
+    "archivo": "src/data/places.ts",
+    "id": "plaza-mariscal-estigarribia",
+    "cantidad": 7,
+    "principal": "/images/commons/plaza-mariscal-estigarribia.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/places.ts",
+    "id": "iglesia-santa-maria",
+    "cantidad": 3,
+    "principal": "/images/commons/iglesia-fachada.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/places.ts",
+    "id": "museo-diocesano",
+    "cantidad": 8,
+    "principal": "/images/commons/museo-casa-indios.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/places.ts",
+    "id": "ykua-teja",
+    "cantidad": 3,
+    "principal": "/images/lugares/ykuateja.jpg",
+    "esDeLugares": true
+  },
+  {
+    "archivo": "src/data/places.ts",
+    "id": "kurusu-cerro",
+    "cantidad": 3,
+    "principal": "/images/lugares/cerrosantamaria.png",
+    "esDeLugares": true
+  },
+  {
+    "archivo": "src/data/places.ts",
+    "id": "monasterio-san-jose",
+    "cantidad": 1,
+    "principal": "/images/calle-colonial.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/places.ts",
+    "id": "taller-hermandad",
+    "cantidad": 1,
+    "principal": "/images/commons/calle-01.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/places.ts",
+    "id": "taller-tapices",
+    "cantidad": 1,
+    "principal": "/images/commons/calle-01.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/places.ts",
+    "id": "casa-museo-bonpland",
+    "cantidad": 1,
+    "principal": "/images/calle-colonial.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/places.ts",
+    "id": "granja-5-de-mayo",
+    "cantidad": 1,
+    "principal": "/images/camino-entrada.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/places.ts",
+    "id": "ingenio-hibernia",
+    "cantidad": 1,
+    "principal": "/images/camino-entrada.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/places.ts",
+    "id": "polideportivo-municipal-santa-maria",
+    "cantidad": 1,
+    "principal": "/images/commons/acceso-ruta.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/places.ts",
+    "id": "balneario-taperã",
+    "cantidad": 1,
+    "principal": "/images/commons/calle-01.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/places.ts",
+    "id": "frutas-del-paraguay",
+    "cantidad": 1,
+    "principal": "/images/commons/calle-01.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/restaurants.ts",
+    "id": "delicias-tati",
+    "cantidad": 2,
+    "principal": "/images/lugares/deliciastati.png",
+    "esDeLugares": true
+  },
+  {
+    "archivo": "src/data/restaurants.ts",
+    "id": "la-familia-resto-bar",
+    "cantidad": 1,
+    "principal": "/images/commons/calle-01.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/restaurants.ts",
+    "id": "dolce-aroma",
+    "cantidad": 1,
+    "principal": "/images/commons/calle-01.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/restaurants.ts",
+    "id": "heladeria-sandy",
+    "cantidad": 1,
+    "principal": "/images/commons/plaza-central-01.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/restaurants.ts",
+    "id": "comidas-santa-maria-hotel",
+    "cantidad": 1,
+    "principal": "/images/commons/casa-indios-hotel.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/restaurants.ts",
+    "id": "son-delicias",
+    "cantidad": 1,
+    "principal": "/images/commons/plaza-central-01.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/events.ts",
+    "id": "fiesta-patronal-8-septiembre",
+    "cantidad": 1,
+    "principal": "/images/commons/plaza-iglesia-01.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/events.ts",
+    "id": "peregrinacion-viernes-santo",
+    "cantidad": 1,
+    "principal": "/images/commons/acceso-ruta.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/events.ts",
+    "id": "semana-santa",
+    "cantidad": 1,
+    "principal": "/images/commons/mono-caraya-02.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/events.ts",
+    "id": "aniversario-fundacion",
+    "cantidad": 1,
+    "principal": "/images/commons/calle-01.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/crafts.ts",
+    "id": "taller-hermandad",
+    "cantidad": 1,
+    "principal": "/images/commons/calle-01.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/crafts.ts",
+    "id": "tapices-santa-maria",
+    "cantidad": 1,
+    "principal": "/images/commons/calle-01.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/crafts.ts",
+    "id": "taller-monasterio",
+    "cantidad": 1,
+    "principal": "/images/calle-colonial.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/crafts.ts",
+    "id": "azuca-hibernia",
+    "cantidad": 1,
+    "principal": "/images/camino-entrada.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/crafts.ts",
+    "id": "visita-museo-jesuitico",
+    "cantidad": 1,
+    "principal": "/images/commons/museo-esculturas-grupo.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/crafts.ts",
+    "id": "peregrinacion-kurusu",
+    "cantidad": 1,
+    "principal": "/images/commons/acceso-ruta.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/crafts.ts",
+    "id": "talleres-artesanales",
+    "cantidad": 1,
+    "principal": "/images/commons/calle-01.jpg",
+    "esDeLugares": false
+  },
+  {
+    "archivo": "src/data/crafts.ts",
+    "id": "monos-caraya",
+    "cantidad": 1,
+    "principal": "/images/commons/mono-caraya-01.jpg",
+    "esDeLugares": false
+  }
+]

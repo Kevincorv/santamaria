@@ -1,0 +1,80 @@
+[
+  {
+    "nombreEnDisco": "aguarahotelportada.jpeg",
+    "hex": "616775617261686f74656c706f72746164612e6a706567",
+    "urlRelativa": "/images/lugares/aguarahotelportada.jpeg",
+    "tieneNoAscii": false
+  },
+  {
+    "nombreEnDisco": "aguaraimagenes.jpeg",
+    "hex": "616775617261696d6167656e65732e6a706567",
+    "urlRelativa": "/images/lugares/aguaraimagenes.jpeg",
+    "tieneNoAscii": false
+  },
+  {
+    "nombreEnDisco": "cerrosantamaria.png",
+    "hex": "636572726f73616e74616d617269612e706e67",
+    "urlRelativa": "/images/lugares/cerrosantamaria.png",
+    "tieneNoAscii": false
+  },
+  {
+    "nombreEnDisco": "deliciastati.png",
+    "hex": "64656c6963696173746174692e706e67",
+    "urlRelativa": "/images/lugares/deliciastati.png",
+    "tieneNoAscii": false
+  },
+  {
+    "nombreEnDisco": "habitaciones aguara2.jpeg",
+    "hex": "68616269746163696f6e657320616775617261322e6a706567",
+    "urlRelativa": "/images/lugares/habitaciones%20aguara2.jpeg",
+    "tieneNoAscii": false
+  },
+  {
+    "nombreEnDisco": "habitaciones de aguara para muuestra.jpeg",
+    "hex": "68616269746163696f6e6573206465206167756172612070617261206d75",
+    "urlRelativa": "/images/lugares/habitaciones%20de%20aguara%20para%20muuestra.jpeg",
+    "tieneNoAscii": false
+  },
+  {
+    "nombreEnDisco": "hospedajelaloportada.jpeg",
+    "hex": "686f73706564616a656c616c6f706f72746164612e6a706567",
+    "urlRelativa": "/images/lugares/hospedajelaloportada.jpeg",
+    "tieneNoAscii": false
+  },
+  {
+    "nombreEnDisco": "Hostal san joseportada.jpeg",
+    "hex": "486f7374616c2073616e206a6f7365706f72746164612e6a706567",
+    "urlRelativa": "/images/lugares/Hostal%20san%20joseportada.jpeg",
+    "tieneNoAscii": false
+  },
+  {
+    "nombreEnDisco": "tiolalo hospedaje.jpeg",
+    "hex": "74696f6c616c6f20686f73706564616a652e6a706567",
+    "urlRelativa": "/images/lugares/tiolalo%20hospedaje.jpeg",
+    "tieneNoAscii": false
+  },
+  {
+    "nombreEnDisco": "Tiolalo hospedaje2.jpeg",
+    "hex": "54696f6c616c6f20686f73706564616a65322e6a706567",
+    "urlRelativa": "/images/lugares/Tiolalo%20hospedaje2.jpeg",
+    "tieneNoAscii": false
+  },
+  {
+    "nombreEnDisco": "tiolalomuestra.jpeg",
+    "hex": "74696f6c616c6f6d7565737472612e6a706567",
+    "urlRelativa": "/images/lugares/tiolalomuestra.jpeg",
+    "tieneNoAscii": false
+  },
+  {
+    "nombreEnDisco": "ykuateja.jpg",
+    "hex": "796b756174656a612e6a7067",
+    "urlRelativa": "/images/lugares/ykuateja.jpg",
+    "tieneNoAscii": false
+  },
+  {
+    "nombreEnDisco": "ñanderogaportada.png",
+    "hex": "c3b1616e6465726f6761706f72746164612e706e67",
+    "urlRelativa": "/images/lugares/%C3%B1anderogaportada.png",
+    "tieneNoAscii": true
+  }
+]

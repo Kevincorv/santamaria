@@ -20,7 +20,7 @@ export const restaurants: Restaurant[] = [
       'Referencia gastronómica de Misiones: helados artesanales, pizzas, picadas y pastelería sobre el Paseo Jesuítico, a una cuadra de la plaza.',
     description:
       'Delicias Tati nació, según sus dueños, "ante una necesidad familiar" y se convirtió en una referencia gastronómica de Misiones. En una entrevista publicada por La Nación explican: "Vendemos helados artesanales, pizzas, picadas y tenemos nuestra pastelería". Está ubicada sobre el Paseo Jesuítico, a una cuadra de la plaza central. Es una empresa familiar de Edith Luisa Enciso García y José Domingo Valenzuela Maidana, y abre de lunes a lunes.',
-    images: ['/images/commons/calle-01.jpg'],
+    images: ['/images/lugares/deliciastati.png', '/images/commons/calle-01.jpg'],
     coordinates: { latitude: -26.7815143, longitude: -56.9424025 },
     coordinatesSource: 'Nodo "Delicias Tati" (amenity=fast_food) en OpenStreetMap.',
     address: {

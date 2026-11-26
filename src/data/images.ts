@@ -23,6 +23,8 @@ export interface ImageAsset {
 const COMMONS = 'https://commons.wikimedia.org/wiki/File:'
 const CC = 'CC BY-SA 4.0'
 const LOCAL = 'Archivo local (procedencia sin verificar)'
+const OPERATOR = 'Fotografía aportada por el operador del portal'
+const OP_LICENSE = 'Uso autorizado para este portal (aportada por el operador)'
 
 export const imageRegistry: Record<string, ImageAsset> = {
   // ---------- Fotografías verificadas de Wikimedia Commons (2023) ----------
@@ -256,6 +258,127 @@ export const imageRegistry: Record<string, ImageAsset> = {
     credit: 'Wikimedia Commons',
     license: CC,
     sourceUrl: `${COMMONS}Bandera_de_Santa_Maria,_Misiones.png`,
+    isAuthentic: true,
+  },
+
+  // ---------- Fotografías aportadas por el operador del portal ----------
+  // Imágenes de establecimientos y atractivos tomadas en el propio distrito y
+  // aportadas para su publicación en este portal.
+  aguaraPortada: {
+    id: 'aguara-portada',
+    url: '/images/lugares/aguarahotelportada.jpeg',
+    alt: 'Frente del Hospedaje Aguará con puertas vidriadas y su cartel de contacto',
+    credit: OPERATOR,
+    license: OP_LICENSE,
+    placeIds: ['hospedaje-aguara'],
+    isAuthentic: true,
+  },
+  aguaraInterior: {
+    id: 'aguara-interior',
+    url: '/images/lugares/aguaraimagenes.jpeg',
+    alt: 'Interior del Hospedaje Aguará',
+    credit: OPERATOR,
+    license: OP_LICENSE,
+    placeIds: ['hospedaje-aguara'],
+    isAuthentic: true,
+  },
+  aguaraHabitacion1: {
+    id: 'aguara-habitacion-1',
+    url: '/images/lugares/habitaciones aguara2.jpeg',
+    alt: 'Habitación del Hospedaje Aguará',
+    credit: OPERATOR,
+    license: OP_LICENSE,
+    placeIds: ['hospedaje-aguara'],
+    isAuthentic: true,
+  },
+  aguaraHabitacion2: {
+    id: 'aguara-habitacion-2',
+    url: '/images/lugares/habitaciones de aguara para muuestra.jpeg',
+    alt: 'Habitación del Hospedaje Aguará con cuatro camas, aire acondicionado y ropa de cama turquesa',
+    credit: OPERATOR,
+    license: OP_LICENSE,
+    placeIds: ['hospedaje-aguara'],
+    isAuthentic: true,
+  },
+  tioLaloPortada: {
+    id: 'tio-lalo-portada',
+    url: '/images/lugares/hospedajelaloportada.jpeg',
+    alt: 'Frente del Hospedaje Tío Lalo con su cartel de madera y el letrero impreso de contactos',
+    credit: OPERATOR,
+    license: OP_LICENSE,
+    placeIds: ['posada-tio-lalo'],
+    isAuthentic: true,
+  },
+  tioLaloFrente: {
+    id: 'tio-lalo-frente',
+    url: '/images/lugares/tiolalo hospedaje.jpeg',
+    alt: 'Acceso del Hospedaje Tío Lalo',
+    credit: OPERATOR,
+    license: OP_LICENSE,
+    placeIds: ['posada-tio-lalo'],
+    isAuthentic: true,
+  },
+  tioLaloDetalle: {
+    id: 'tio-lalo-detalle',
+    url: '/images/lugares/Tiolalo hospedaje2.jpeg',
+    alt: 'Detalle del Hospedaje Tío Lalo',
+    credit: OPERATOR,
+    license: OP_LICENSE,
+    placeIds: ['posada-tio-lalo'],
+    isAuthentic: true,
+  },
+  tioLaloMuestra: {
+    id: 'tio-lalo-muestra',
+    url: '/images/lugares/tiolalomuestra.jpeg',
+    alt: 'Vista del interior del Hospedaje Tío Lalo',
+    credit: OPERATOR,
+    license: OP_LICENSE,
+    placeIds: ['posada-tio-lalo'],
+    isAuthentic: true,
+  },
+  nanderogaPortada: {
+    id: 'nanderoga-portada',
+    url: '/images/lugares/ñanderogaportada.png',
+    alt: 'Cartel de madera de la Posada ÑandeRoga con el lema "Nuestra casa, tu descanso" y su contacto de WhatsApp',
+    credit: OPERATOR,
+    license: OP_LICENSE,
+    placeIds: ['posada-nanderoga'],
+    isAuthentic: true,
+  },
+  hostalSanJose: {
+    id: 'hostal-san-jose-portada',
+    url: '/images/lugares/Hostal san joseportada.jpeg',
+    alt: 'Frente del Hostal San José con su cartel ovalado y teléfono de contacto',
+    credit: OPERATOR,
+    license: OP_LICENSE,
+    placeIds: ['hostal-san-jose'],
+    isAuthentic: true,
+  },
+  ykuaTejaFoto: {
+    id: 'ykuateja',
+    url: '/images/lugares/ykuateja.jpg',
+    alt: 'Ykua Teja: piletas de agua del antiguo manantial jesuítico bajo una estructura de madera con techo de tejas',
+    credit: OPERATOR,
+    license: OP_LICENSE,
+    placeIds: ['ykua-teja'],
+    isAuthentic: true,
+  },
+  cerroSantaMaria: {
+    id: 'cerrosantamaria',
+    url: '/images/lugares/cerrosantamaria.png',
+    alt: 'Capilla blanca y cruz de la cima del Kurusu Cerro (Cerro de Santa María)',
+    credit: OPERATOR,
+    license: OP_LICENSE,
+    placeIds: ['kurusu-cerro'],
+    isAuthentic: true,
+  },
+  deliciasTati: {
+    id: 'deliciastati',
+    url: '/images/lugares/deliciastati.png',
+    alt: 'Terraza de Delicias Tati con mesas de madera frente al local vidriado',
+    credit: OPERATOR,
+    license: OP_LICENSE,
+    placeIds: ['delicias-tati'],
     isAuthentic: true,
   },
 }

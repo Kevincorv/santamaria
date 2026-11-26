@@ -165,7 +165,7 @@ export const places: Place[] = [
       'Ykua Teja es un manantial de agua de origen jesuítico. El nombre combina ykua (naciente o agua que brota) y teja (la cubierta de tejas que protegía la fuente). Fue la primera fuente de la antigua reducción y, con el tiempo, funcionó como lavandería comunitaria. El agua sigue brotando: ante los cortes del servicio, los vecinos acuden todavía al ykua. En julio de 2021 la Municipalidad realizó obras de restauración del sitio, que hoy funciona como plaza con áreas verdes.',
     history:
       'La fuente formaba parte del sistema hidráulico de la reducción jesuítico-guaraní, junto con el acopio y distribución de agua entre los pobladores. Su uso comunitario se mantuvo durante generaciones, lo que la convierte en un testimonio vivo de la vida cotidiana de la misión.',
-    images: ['/images/calle-colonial.jpg', '/images/commons/calle-01.jpg'],
+    images: ['/images/lugares/ykuateja.jpg', '/images/calle-colonial.jpg', '/images/commons/calle-01.jpg'],
     coordinates: { latitude: -26.784281, longitude: -56.935333 },
     coordinatesSource: 'Google Maps (coordenadas aportadas por la Municipalidad de Santa María de Fe).',
     address: {
@@ -203,7 +203,7 @@ export const places: Place[] = [
       'El Kurusu Cerro es el mirador natural y el sitio de peregrinación más importante de Santa María de Fe. En la cima hay una capilla y una cruz, encontradas en la época de las reducciones según la tradición local. El acceso principal está a unos 9 kilómetros del casco urbano; el sendero de ascenso ronda los 2 kilómetros y presenta las estaciones del calvario. En la base del cerro hay artesanos y estacionamientos, y el ingreso es gratuito.',
     history:
       'La tradición de ascender al cerro se remonta a la época jesuítico-guaraní. Desde entonces, cada Viernes Santo miles de peregrinos suben desde muy temprano a pagar promesas: se estima que en 2024 concurrieron unas 15.000 personas entre el Jueves y el Viernes Santo.',
-    images: ['/images/commons/acceso-ruta.jpg', '/images/camino-entrada.jpg'],
+    images: ['/images/lugares/cerrosantamaria.png', '/images/commons/acceso-ruta.jpg', '/images/camino-entrada.jpg'],
     coordinates: { latitude: -26.790877, longitude: -56.880393 },
     coordinatesSource: 'Acceso al cerro — Google Maps (coordenadas aportadas por la Municipalidad de Santa María de Fe).',
     address: {

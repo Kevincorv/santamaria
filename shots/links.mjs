@@ -33,6 +33,8 @@ for (const route of seedRoutes) {
   if (info.isNotFound) notFoundOn.push(route);
   for (const l of info.links) {
     const clean = l.split('?')[0].split('#')[0];
+    // Los assets (imágenes, documentos) no son rutas del SPA: se excluyen.
+    if (/\.(png|jpe?g|webp|svg|gif|avif|ico|pdf|zip|mp4|webm)$/i.test(clean)) continue;
     if (clean && clean !== '/') internal.add(clean);
     else if (clean === '/') internal.add('/');
   }

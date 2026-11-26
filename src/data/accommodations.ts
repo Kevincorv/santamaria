@@ -84,7 +84,12 @@ export const accommodations: Accommodation[] = [
       'Hospedaje del centro de Santa María de Fe con teléfono de contacto publicado en directorios turísticos.',
     description:
       'El Hospedaje Aguará figura en directorios turísticos paraguayos y en fichas de mapas como opción de alojamiento en el centro de Santa María de Fe. No se encontraron sitios web oficiales ni tarifas publicadas: la disponibilidad y los servicios se confirman por teléfono.',
-    images: ['/images/commons/calle-01.jpg'],
+    images: [
+      '/images/lugares/aguarahotelportada.jpeg',
+      '/images/lugares/aguaraimagenes.jpeg',
+      '/images/lugares/habitaciones aguara2.jpeg',
+      '/images/lugares/habitaciones de aguara para muuestra.jpeg',
+    ],
     coordinates: { latitude: -26.7818, longitude: -56.9428 },
     coordinatesSource:
       'Directorio turístico Ahendu (coordenada aproximada del centro urbano); no verificada en OpenStreetMap.',
@@ -115,12 +120,17 @@ export const accommodations: Accommodation[] = [
     name: 'Posada Tío Lalo',
     kind: 'posada',
     category: 'alojamiento',
-    categoryLabel: 'Posada · Datos en verificación',
+    categoryLabel: 'Posada · Cartel propio verificado',
     shortDescription:
-      'Posada publicada por SENATUR, pero con las fuentes en conflicto sobre el distrito al que pertenece: verificar antes de viajar.',
+      'Posada con cartel propio en Santa María de Fe, publicada además por SENATUR: verificar el distrito antes de viajar.',
     description:
-      'La Posada Tío Lalo aparece en el listado oficial de posadas turísticas de la SENATUR (febrero 2024) con el teléfono (0992) 611268, pero figura bajo el distrito de Santa Rosa, distinto de Santa María de Fe. En fichas de mapas públicas, el mismo número aparece como "Hospedaje Tío Lalo" ubicado en el centro de Santa María de Fe. Debido a esa discrepancia entre fuentes, este alojamiento se publica con estado de verificación pendiente.',
-    images: ['/images/commons/calle-01.jpg'],
+      'La Posada Tío Lalo aparece en el listado oficial de posadas turísticas de la SENATUR (febrero 2024) con el teléfono (0992) 611268, pero figura bajo el distrito de Santa Rosa, distinto de Santa María de Fe. En fichas de mapas públicas, el mismo número aparece como "Hospedaje Tío Lalo" ubicado en el centro de Santa María de Fe, y el frente publicado en esta ficha muestra un cartel de madera con ese nombre junto a uno impreso con los contactos 0992 611 268 y 0982 237 249. La discrepancia entre fuentes sobre el distrito persiste, por lo que el alojamiento se publica con estado de verificación pendiente.',
+    images: [
+      '/images/lugares/hospedajelaloportada.jpeg',
+      '/images/lugares/tiolalo hospedaje.jpeg',
+      '/images/lugares/Tiolalo hospedaje2.jpeg',
+      '/images/lugares/tiolalomuestra.jpeg',
+    ],
     coordinates: { latitude: -26.7827, longitude: -56.943 },
     coordinatesSource:
       'Ficha pública de mapas (coordenada aproximada). Contradice la ubicación del listado SENATUR (Santa Rosa); confirmar en el lugar.',
@@ -134,17 +144,19 @@ export const accommodations: Accommodation[] = [
     verificationStatus: {
       status: 'needs_update',
       lastChecked: DATA_REVIEW_DATE,
-      source: 'Listado SENATUR de posadas turísticas (2024) vs. fichas de mapas públicas',
+      source: 'Listado SENATUR de posadas turísticas (2024) vs. fichas de mapas públicas; frente y contactos verificados sobre el cartel del establecimiento (fotografía de la ficha)',
     },
     lastUpdated: DATA_REVIEW_DATE,
     sources: [
       { title: 'SENATUR — Listado de posadas turísticas (PDF, febrero 2024)', url: 'https://senatur.gov.py/wp-content/uploads/2024/03/listado-posadas-turisticas.pdf' },
+      { title: 'Cartel de "Hospedaje Tío Lalo" (fotografía de la ficha)', url: '/images/lugares/hospedajelaloportada.jpeg' },
     ],
     services: [CONSULTAR_PREVIAMENTE],
     contact: { phone: '+595 992 611 268' },
     access: CONSULTAR_PREVIAMENTE,
     recommendations: [
       'Llamá antes de ir: las fuentes difieren sobre si opera en Santa María de Fe o en Santa Rosa.',
+      'El cartel del local publica dos teléfonos: 0992 611 268 y 0982 237 249.',
     ],
     priceInfo: CONSULTAR_PREVIAMENTE,
   },
@@ -154,12 +166,12 @@ export const accommodations: Accommodation[] = [
     name: 'Posada ÑandeRoga',
     kind: 'posada',
     category: 'alojamiento',
-    categoryLabel: 'Posada · Datos parciales',
+    categoryLabel: 'Posada · Contacto por cartel',
     shortDescription:
-      'Posada mencionada en guías con desayuno y quincho con parrilla; sin datos de contacto publicados.',
+      'Posada familiar de Santa María de Fe, con cartel propio en el acceso. El lema de su frente es "Nuestra casa, tu descanso".',
     description:
-      'La Posada ÑandeRoga aparece en guías turísticas locales con desayuno y quincho con parrilla, y en listados de alojamientos turísticos en línea. No se encontraron sitio web propio, teléfono ni reseñas verificables publicados, por lo que se incluye como opción a confirmar en el lugar.',
-    images: ['/images/commons/calle-01.jpg'],
+      'La Posada ÑandeRoga aparece en guías turísticas locales con desayuno y quincho con parrilla, y en listados de alojamientos turísticos en línea. Su cartel de acceso, documentado en la fotografía publicada en esta ficha, exhibe el nombre "Posada ÑandeRoga", el lema "Nuestra casa, tu descanso" y un contacto de WhatsApp. La dirección exacta y las condiciones de estadía siguen sin datos publicados, por lo que conviene coordinar la visita por ese canal antes de viajar.',
+    images: ['/images/lugares/ñanderogaportada.png'],
     address: {
       street: CONSULTAR_PREVIAMENTE,
       city: 'Santa María de Fe',
@@ -169,15 +181,57 @@ export const accommodations: Accommodation[] = [
     verificationStatus: {
       status: 'pending',
       lastChecked: DATA_REVIEW_DATE,
-      source: 'Guía Ahendu y listados de alojamientos en línea sin reseñas',
+      source: 'Guía Ahendu y listados de alojamientos en línea; nombre y contacto verificados sobre el cartel del propio establecimiento (fotografía de la ficha)',
     },
     lastUpdated: DATA_REVIEW_DATE,
     sources: [
       { title: 'Ahendu — guía de San Ignacio y Santa María de Fe', url: 'https://ahendu.com.py/turismo/guia-de-san-ignacio-santa-maria/' },
+      { title: 'Cartel de acceso de la Posada ÑandeRoga (fotografía de la ficha)', url: '/images/lugares/ñanderogaportada.png' },
     ],
     services: ['Desayuno (mencionado en guía)', 'Quincho con parrilla (mencionado en guía)'],
+    contact: {
+      phone: '+595 972 795 003',
+      whatsapp: '+595 972 795 003',
+    },
     access: CONSULTAR_PREVIAMENTE,
-    recommendations: ['Confirmá existencia, dirección y disponibilidad en la oficina de turismo local.'],
+    recommendations: ['Coordiná la llegada por WhatsApp antes de viajar: no hay dirección exacta publicada.'],
+    priceInfo: CONSULTAR_PREVIAMENTE,
+  },
+  {
+    id: 'hostal-san-jose',
+    slug: 'hostal-san-jose',
+    name: 'Hostal San José',
+    kind: 'hospedaje',
+    category: 'alojamiento',
+    categoryLabel: 'Hospedaje · Cartel propio verificado',
+    shortDescription:
+      'Hospedaje de planta baja sobre calle empedrada, identificado por un cartel ovalado con su nombre y teléfono de contacto.',
+    description:
+      'El Hostal San José es un hospedaje de Santa María de Fe reconocible por el cartel ovalado instalado sobre el frente de la casona de tejas donde funciona. El propio cartel, publicado en esta ficha, exhibe el nombre "Hostal San José" y el teléfono 0985 726 958. No debe confundirse con el Monasterio San José, que es la comunidad monástica del distrito y figura en la sección de lugares. Hasta el momento solo se documenta el frente y el contacto: los servicios, las tarifas y las condiciones de estadía deben confirmarse directamente por teléfono.',
+    images: ['/images/lugares/Hostal san joseportada.jpeg'],
+    address: {
+      street: CONSULTAR_PREVIAMENTE,
+      city: 'Santa María de Fe',
+      region: 'Misiones',
+      country: 'Paraguay',
+      note: 'El frente se documenta en la fotografía de la ficha; la dirección exacta no figura en fuentes publicadas.',
+    },
+    verificationStatus: {
+      status: 'pending',
+      lastChecked: DATA_REVIEW_DATE,
+      source: 'Cartel del propio establecimiento (fotografía de la ficha); sin fichas en directorios ni sitio oficial publicado',
+    },
+    lastUpdated: DATA_REVIEW_DATE,
+    sources: [
+      { title: 'Cartel "Hostal San José" (fotografía de la ficha)', url: '/images/lugares/Hostal san joseportada.jpeg' },
+    ],
+    services: [CONSULTAR_PREVIAMENTE],
+    contact: { phone: '+595 985 726 958' },
+    access: CONSULTAR_PREVIAMENTE,
+    recommendations: [
+      'Consultá servicios, tarifas y disponibilidad por teléfono antes de viajar.',
+      'No confundir con el Monasterio San José, que es la comunidad monástica del distrito.',
+    ],
     priceInfo: CONSULTAR_PREVIAMENTE,
   },
 ]

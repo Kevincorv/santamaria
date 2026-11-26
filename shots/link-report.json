@@ -16,6 +16,7 @@
     "/historia",
     "/hospedajes",
     "/hospedajes/hospedaje-aguara",
+    "/hospedajes/hostal-san-jose",
     "/hospedajes/posada-nanderoga",
     "/hospedajes/posada-tio-lalo",
     "/hospedajes/santa-maria-hotel",
@@ -49,7 +50,7 @@
     {
       "route": "/",
       "pass": true,
-      "len": 4390,
+      "len": 4393,
       "title": "Guía turística y patrimonial · Santa María de Fe Digital"
     },
     {
@@ -67,7 +68,7 @@
     {
       "route": "/contacto",
       "pass": true,
-      "len": 3118,
+      "len": 3284,
       "title": "Contacto y cómo llegar · Santa María de Fe Digital"
     },
     {
@@ -133,31 +134,37 @@
     {
       "route": "/hospedajes",
       "pass": true,
-      "len": 3553,
+      "len": 4182,
       "title": "Hoteles y hospedajes · Santa María de Fe Digital"
     },
     {
       "route": "/hospedajes/hospedaje-aguara",
       "pass": true,
-      "len": 2439,
+      "len": 2453,
       "title": "Hospedaje Aguará · Santa María de Fe Digital"
+    },
+    {
+      "route": "/hospedajes/hostal-san-jose",
+      "pass": true,
+      "len": 2898,
+      "title": "Hostal San José · Santa María de Fe Digital"
     },
     {
       "route": "/hospedajes/posada-nanderoga",
       "pass": true,
-      "len": 2466,
+      "len": 2846,
       "title": "Posada ÑandeRoga · Santa María de Fe Digital"
     },
     {
       "route": "/hospedajes/posada-tio-lalo",
       "pass": true,
-      "len": 2897,
+      "len": 3318,
       "title": "Posada Tío Lalo · Santa María de Fe Digital"
     },
     {
       "route": "/hospedajes/santa-maria-hotel",
       "pass": true,
-      "len": 3866,
+      "len": 3880,
       "title": "Santa María Hotel · Santa María de Fe Digital"
     },
     {
@@ -277,7 +284,7 @@
     {
       "route": "/mapa",
       "pass": true,
-      "len": 2262,
+      "len": 2311,
       "title": "Mapa interactivo · Santa María de Fe Digital"
     },
     {

@@ -1,0 +1,71 @@
+{
+  "rows": [
+    {
+      "archivo": "aguarahotelportada.jpeg",
+      "referenciada": true,
+      "en": "src/data/accommodations.ts, src/data/images.ts"
+    },
+    {
+      "archivo": "aguaraimagenes.jpeg",
+      "referenciada": true,
+      "en": "src/data/accommodations.ts, src/data/images.ts"
+    },
+    {
+      "archivo": "cerrosantamaria.png",
+      "referenciada": true,
+      "en": "src/data/images.ts, src/data/places.ts"
+    },
+    {
+      "archivo": "deliciastati.png",
+      "referenciada": true,
+      "en": "src/data/images.ts, src/data/restaurants.ts"
+    },
+    {
+      "archivo": "habitaciones aguara2.jpeg",
+      "referenciada": true,
+      "en": "src/data/accommodations.ts, src/data/images.ts"
+    },
+    {
+      "archivo": "habitaciones de aguara para muuestra.jpeg",
+      "referenciada": true,
+      "en": "src/data/accommodations.ts, src/data/images.ts"
+    },
+    {
+      "archivo": "hospedajelaloportada.jpeg",
+      "referenciada": true,
+      "en": "src/data/accommodations.ts, src/data/images.ts"
+    },
+    {
+      "archivo": "Hostal san joseportada.jpeg",
+      "referenciada": true,
+      "en": "src/data/accommodations.ts, src/data/images.ts"
+    },
+    {
+      "archivo": "tiolalo hospedaje.jpeg",
+      "referenciada": true,
+      "en": "src/data/accommodations.ts, src/data/images.ts"
+    },
+    {
+      "archivo": "Tiolalo hospedaje2.jpeg",
+      "referenciada": true,
+      "en": "src/data/accommodations.ts, src/data/images.ts"
+    },
+    {
+      "archivo": "tiolalomuestra.jpeg",
+      "referenciada": true,
+      "en": "src/data/accommodations.ts, src/data/images.ts"
+    },
+    {
+      "archivo": "ykuateja.jpg",
+      "referenciada": true,
+      "en": "src/data/images.ts, src/data/places.ts"
+    },
+    {
+      "archivo": "ñanderogaportada.png",
+      "referenciada": true,
+      "en": "src/data/accommodations.ts, src/data/images.ts"
+    }
+  ],
+  "totalRefs": 37,
+  "rotas": []
+}
